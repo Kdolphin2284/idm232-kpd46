@@ -1,0 +1,70 @@
+/* /////////////////////////// */
+/* ////////// FONTS ////////// */
+/* /////////////////////////// */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Bold.woff2") format("woff2"),
+         url("/fonts/Roboto-Bold.woff") format("woff"),
+         url("/fonts/Roboto-Bold.ttf") format("ttf"),
+         url("/fonts/Roboto-Light.woff2") format("woff2"),
+         url("/fonts/Roboto-Light.woff") format("woff"),
+         url("/fonts/Roboto-Light.ttf") format("ttf"); 
+}
+@font-face {
+    font-family: "Arbutus-Slab";
+    src: url("/fonts/arbutus-slab-regular.woff2") format("woff2"),
+         url("/fonts/arbutus-slab-regular.woff") format("woff"),
+         url("/fonts/arbutus-slab-regular.ttf") format("ttf");
+}
+
+
+/* ///////////////////////////////// */
+/* ////////// GENERAL CSS ////////// */
+/* ///////////////////////////////// */
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+
+
+/* //////////////////////////////// */
+/* ////////// HEADER CSS ////////// */
+/* //////////////////////////////// */
+
+header {
+    height: 90px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+.flexHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 65px;
+}
+.navLinks a {
+    background: #FF7E36;
+    color: #fff;
+    padding: 8px 32px;
+    border-radius: 50px;
+}
+
+
+/* /////////////////////////////////////// */
+/* ////////// HOMEPAGE HERO CSS ////////// */
+/* /////////////////////////////////////// */
+
