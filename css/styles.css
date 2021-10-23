@@ -43,6 +43,7 @@ h2 {
     color: #fff;
     font-family: 'Arbutus Slab';
     font-size: 60px;
+    font-weight: lighter;
 }
 h4 {
     margin: 0;
@@ -77,12 +78,13 @@ li {
 /* //////////////////////////////// */
 
 header {
-    height: 90px;
+    height: 80px;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
+    z-index: 1;
     width: 100%;
 }
 .flexHeader {
@@ -93,11 +95,12 @@ header {
     padding: 0 65px;
 }
 .navLinks a {
-    background: #FF7E36;
-    color: #fff;
-    padding: 8px 32px;
+    background: #fff;
+    color: #FF7E36;
+    padding: 7px 32px;
     border-radius: 50px;
     font-family: 'Roboto Medium';
+    border: 2px solid #FF7E36;
 }
 
 
@@ -242,11 +245,12 @@ header {
     margin: 50px auto 0 auto;
 }
 #recipeSuggestionsLink a {
-    background: #ff7e36;
-    color: #fff;
-    padding: 8px 25px;
+    background: #fff;
+    color: #ff7e36;
+    padding: 7px 25px;
     border-radius: 50px;
     font-family: 'Roboto Medium';
+    border: 2px solid #ff7e36;
 }
   
 
