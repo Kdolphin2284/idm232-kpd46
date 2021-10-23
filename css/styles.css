@@ -3,19 +3,28 @@
 /* /////////////////////////// */
 
 @font-face {
-    font-family: "Roboto";
-    src: url("/fonts/Roboto-Bold.woff2") format("woff2"),
-         url("/fonts/Roboto-Bold.woff") format("woff"),
-         url("/fonts/Roboto-Bold.ttf") format("ttf"),
-         url("/fonts/Roboto-Light.woff2") format("woff2"),
-         url("/fonts/Roboto-Light.woff") format("woff"),
-         url("/fonts/Roboto-Light.ttf") format("ttf"); 
+    font-family: "Roboto Bold";
+    src: url('../fonts/Roboto-Bold.woff2') format("woff2"),
+         url('../fonts/Roboto-Bold.woff') format("woff"),
+         url('../fonts/Roboto-Bold.ttf') format("truetype");
 }
 @font-face {
-    font-family: "Arbutus-Slab";
-    src: url("/fonts/arbutus-slab-regular.woff2") format("woff2"),
-         url("/fonts/arbutus-slab-regular.woff") format("woff"),
-         url("/fonts/arbutus-slab-regular.ttf") format("ttf");
+    font-family: "Roboto Medium";
+    src: url('../fonts/Roboto-Medium.woff2') format("woff2"),
+         url('../fonts/Roboto-Medium.woff') format("woff"),
+         url('../fonts/Roboto-Medium.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Roboto Light";
+    src: url('../fonts/Roboto-Light.woff2') format("woff2"),
+         url('../fonts/Roboto-Light.woff') format("woff"),
+         url('../fonts/Roboto-Light.ttf') format("truetype"); 
+}
+@font-face {
+    font-family: "Arbutus Slab";
+    src: url('../fonts/arbutus-slab-regular.woff2') format("woff2"),
+         url('../fonts/arbutus-slab-regular.woff') format("woff"),
+         url('../fonts/arbutus-slab-regular.ttf') format("truetype");
 }
 
 
@@ -23,7 +32,29 @@
 /* ////////// GENERAL CSS ////////// */
 /* ///////////////////////////////// */
 
+h1 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Arbutus Slab';
+    font-size: 80px;
+}
+h2 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Arbutus Slab';
+    font-size: 60px;
+}
+h4 {
+    margin: 0;
+}
+p {
+    margin: 0;
+    color: #000;
+    font-family: 'Roboto Light';
+    font-size: 18px;
+} 
 a {
+    display: inline-block;
     text-decoration: none;
     font-size: 20px;
 }
@@ -33,6 +64,11 @@ ul {
 }
 li {
     list-style: none;
+}
+.contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 
@@ -46,7 +82,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: relative;
     width: 100%;
 }
 .flexHeader {
@@ -61,6 +97,7 @@ header {
     color: #fff;
     padding: 8px 32px;
     border-radius: 50px;
+    font-family: 'Roboto Medium';
 }
 
 
@@ -68,3 +105,160 @@ header {
 /* ////////// HOMEPAGE HERO CSS ////////// */
 /* /////////////////////////////////////// */
 
+#hero {
+    height: calc(80vh - 90px);
+    background: url('../media/images/recipeHomepageHero3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+#heroContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#hero field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+#hero field label {
+    color: #fff;
+    font-family: 'Roboto Light';
+    font-weight: inherit;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.heroPositioning field img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    background: #fff;
+}
+#homeSearch {
+    padding: 13px 80px 13px 22px;
+    width: 520px;
+    border: none;
+    border-radius: 50px;
+}
+#heroArrow {
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    flex-wrap: wrap;
+}
+#heroArrow img {
+    margin-right: 90px;
+}
+#hero::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+}
+.heroPositioning {
+    position: relative;
+    width: calc(100% - 130px);
+}
+#heroContainer .heroPositioning:not(:last-child) {
+    margin-bottom: 165px;
+}
+
+
+/* ///////////////////////////////////////////////// */
+/* ////////// HOME RECIPE SUGGESTIONS CSS ////////// */
+/* ///////////////////////////////////////////////// */
+
+#homeRecipeSuggestions h2 {
+    color: #393939;
+    margin-bottom: 50px;
+}
+#homeRecipeSuggestions h2 span {
+    color: #ff7e36;
+}
+#homeRecipeSuggestions {
+    padding: 100px 0;
+} 
+#homeRecipeSuggestions .contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#recipeSuggestionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foodCard .cardImage {
+    padding-bottom: 60%;
+    background-image: url(../media/images/chickenWings.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recipeSuggestionsContainer .foodCard:nth-child(2) .cardImage {
+    background-image: url(../media/images/stirfry.jpg);
+}
+#recipeSuggestionsContainer .foodCard:nth-child(3) .cardImage {
+    background-image: url(../media/images/burger.jpg);
+}
+.foodCard {
+    width: 30%;
+    box-shadow: 0px 0px 15px 6px #00000014;
+}
+.cardContent h4 {
+    font-family: 'Roboto Bold';
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #000;
+}
+.recipeStars {
+    margin: 10px 0;
+}
+.cardContent {
+    padding: 20px 15px;
+}
+#recipeSuggestionsLink {
+    margin: 50px auto 0 auto;
+}
+#recipeSuggestionsLink a {
+    background: #ff7e36;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-family: 'Roboto Medium';
+}
+  
+
+
+/* //////////////////////////////// */
+/* ////////// FOOTER CSS ////////// */
+/* //////////////////////////////// */
+
+footer {
+    height: 140px;
+    background: #393939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
