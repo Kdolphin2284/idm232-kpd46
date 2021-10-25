@@ -75,6 +75,9 @@ h2 {
     font-size: 60px;
     font-weight: lighter;
 }
+h3 {
+    margin: 0;
+}
 h4 {
     margin: 0;
 }
@@ -101,6 +104,9 @@ li {
     margin: 0 auto;
     width: 100%;
 }
+textarea {
+    font-family: Roboto Light;
+}
 .col-2-3 {
     width: 66%;
 }
@@ -116,7 +122,10 @@ li {
 .col-1-3 {
     width: 33%;
 }
+input[type="search"], input[type="text"] {
+    font-family: Roboto Medium;
 
+}
 
 /* //////////////////////////////// */
 /* ////////// HEADER CSS ////////// */
@@ -1157,7 +1166,73 @@ select#cookingLevel, select#adminRating {
     background: transparent;
 }
 
-  
+
+/* //////////////////////////////////////////////// */
+/* ////////// ADMIN EDIT DELETE PAGE CSS ////////// */
+/* //////////////////////////////////////////////// */
+
+.dryWetBox ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.dryWetBox ul li {
+    font-family: Roboto Light;
+}
+.imagePreview {
+    width: 200px;
+    padding-bottom: 150px;
+    background: url(../media/images/chickenWings.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.dryWetContainer + field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.adminButtonFlex input:nth-child(2) {
+    background: #ff5959 !important;
+    border-color: #fe5858 !important;
+}
+  .adminButtonFlex input:nth-child(2):hover {
+    color: #ff5959 !important;
+    background: transparent !important;
+}
+.adminButtonFlex {
+    margin: 0 auto;
+}
+.adminButtonFlex input:not(:last-child) {
+    margin-right: 30px !important;
+}
+.dryWetBox ul li:hover {
+    color: #ff5959;
+    cursor: pointer;
+}
+.directionsAddStep ul li:hover {
+    background: #ff5959;
+    cursor: pointer;
+}
+.directionsAddStep ul li:hover::before {
+    display: none;
+}
+.directionsAddStep ul li::after {
+    position: absolute;
+    display: none;
+    content: url(../media/images/adminEditDeleteRecipeX.svg);
+    top: -8px;
+    left: -10px;
+}
+.directionsAddStep ul li:hover::after {
+    display: block;
+}
+th a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    line-height: 56px;
+}
+
 
 /* //////////////////////////////// */
 /* ////////// FOOTER CSS ////////// */
