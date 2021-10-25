@@ -1712,5 +1712,7 @@ textarea {
     margin-right: 0 !important;
     margin-left: 0 !important;
 }
-  
+#heroArrow {
+    flex-direction: column;
+}
 }
