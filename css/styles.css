@@ -980,9 +980,184 @@ header {
 .styledRow:not(:last-child) {
     margin-bottom: 25px;
 }
- 
 
 
+/* ////////////////////////////////////////// */
+/* ////////// ADMIN ADD RECIPE CSS ////////// */
+/* ////////////////////////////////////////// */
+
+.adminAdd h2 {
+    color: #000;
+    margin: 60px 0;
+    padding-left: 65px;
+}
+#recipeAddForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px;
+    background: #f2f2f2;
+    margin-bottom: 80px;
+}
+#cookingLevel option:not(:first-child), #adminRating option:not(:first-child) {
+    background: #FFA573;
+    color: #fff;
+}
+select#cookingLevel, select#adminRating {
+    background: #fff;
+    border: none;
+    padding: 5px 15px;
+    font-family: Roboto Medium;
+}
+#recipeAddForm label {
+    font-family: Roboto Medium;
+    margin-right: 20px;
+}
+#recipeAddForm field:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#recipeAddForm field input {
+    border: none;
+    outline: none;
+}
+#recipeAddForm field:first-child input {
+    width: 600px;
+} 
+#recipeAddForm field {
+    margin-bottom: 40px;
+}  
+#recipeAddForm field input[type="text"] {
+    padding: 8px;
+    font-family: Roboto Medium;
+}
+.dryWetFlex {
+    margin-left: 104.7167px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.radioFlex label {
+    color: #000;
+}
+#ingredientSubmit {
+    margin-left: 104.7167px;
+    color: #fff;
+    background: #FF7E36;
+    border: 2px solid #FF7E36 !important;
+    padding: 4px 20px;
+    border-radius: 50px;
+    font-family: Roboto Medium;
+    font-size: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+#ingredientSubmit:hover {
+    background: transparent;
+    color: #ff7e36;
+}
+.dryWetContainer {
+    display: flex;
+    margin-bottom: 40px;
+}
+.dryWetBox:first-child {
+    margin-right: 30px;
+}
+.dryWetBox {
+    padding: 20px;
+    background: #fff;
+    padding: 20px 20px 40px 20px;
+    width: 300px;
+}
+.dryWetBox h3 {
+    margin: 0;
+    font-family: Roboto Medium;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+#imageUpload {
+    display: none;
+}
+#recipeAddForm field:nth-child(8) label:nth-child(2) {
+    margin: 0;
+    padding: 10px 15px;
+    background: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.directionsField {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.directionsAddStep {
+    margin-left: 92.65px;
+}
+#directionsAddSubmit {
+    margin-left: 92.65px;
+    margin-bottom: 15px;
+    border: 2px solid #ff7e36 !important;
+    background: #ff7e36;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: Roboto Medium;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#directionsAddSubmit:hover {
+    background: transparent;
+    color: #ff7e36;
+}
+.directionsAddStep ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.directionsAddStep ul li {
+    background: #FFA573;
+    color: #fff;
+    display: inline-block;
+    padding: 12px;
+    font-family: Roboto Medium;
+    max-width: 300px;
+    position: relative;
+}
+.directionsAddStep ul {
+    display: flex;
+    flex-direction: column;
+}  
+.directionsAddStep ul li::before {
+    position: absolute;
+    display: block;
+    content: url(../media/images/adminAddRecipeX.svg);
+    top: -8px;
+    left: -10px;
+}
+#recipeAddForm field:nth-child(10) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#recipeFormSubmit {
+    background: #393939;
+    border: 2px solid #393939;
+    color: #fff;
+    font-family: Arbutus Slab;
+    padding: 10px 30px;
+    font-size: 30px;
+    border-radius: 12px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#recipeFormSubmit:hover {
+    color: #393939;
+    background: transparent;
+}
+
+  
 
 /* //////////////////////////////// */
 /* ////////// FOOTER CSS ////////// */
