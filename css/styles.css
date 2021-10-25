@@ -133,7 +133,9 @@ input[type="search"], input[type="text"] {
 .tabletFooter {
     display: none;
 }
-  
+.mobileFooter {
+    display: none;
+} 
 
 /* //////////////////////////////// */
 /* ////////// HEADER CSS ////////// */
@@ -1459,4 +1461,256 @@ th a {
 textarea {
     width: 75%;
 }
+}
+
+@media only screen and (max-width: 767px) {
+#hero h1 {
+    font-size: 41px;
+    text-align: center;
+}
+#hero h2 {
+    text-align: center;
+}
+#heroArrow img {
+    margin-right: 0;
+    margin-top: 40px;
+}
+.heroPositioning {
+    width: calc(100% - 60px);
+}
+#heroContainer .heroPositioning:not(:last-child) {
+    margin-bottom: 10vh;
+}
+#hero form label {
+    font-size: 20px;
+}
+#homeSearch {
+    padding: 13px 64px 13px 22px;
+    width: 300px;
+}
+#heroArrow {
+    justify-content: center;
+    align-items: center;
+}
+#hero h2 {
+    font-size: 34px;
+}
+#homeRecipeSuggestions h2 {
+    font-size: 36px;
+}
+#recipeSuggestionsContainer .foodCard {
+    width: 100%;
+}
+#homeRecipeSuggestions {
+    padding: 100px 30px;
+}
+#recipeSuggestionsContainer {
+    flex-wrap: wrap;
+}
+#recipeSuggestionsContainer .foodCard:not(:last-child) {
+    margin-bottom: 30px;
+} 
+.tabletFooter {
+    display: none;
+}
+.mobileFooter {
+    display: block;
+}
+.flexHeader {
+    padding: 0 30px;
+}
+#recipes {
+    flex-direction: column;
+} 
+#recipes .col-1-3 {
+    width: 100%;
+}
+#filterForm {
+    margin: 0;
+    margin-bottom: 50px;
+}
+#recipes {
+    padding: 100px 30px;
+}
+.recipeFlex {
+    width: 100%;
+}
+.foodCard {
+    width: 100%;
+}
+#recipes .recipeFlex .foodCard:last-child {
+    margin: 0;
+}
+.recipeFlex .foodCard:nth-last-child(-n+2) {
+    margin-bottom: 30px;
+}
+.recipeFlex .foodCard:not(:last-child) {
+    margin-bottom: 30px !important;
+}
+.resultsSearch form label {
+    font-size: 20px;
+}
+#recipeHero h1, #searchHero h1 {
+    font-size: 40px;
+}
+#individualHero h1 {
+    font-size: 28px;
+}
+
+.helpfulInfo {
+    /* padding: 80px 50px; */
+    padding: 80px 30px;
+}
+.helpfulInfo .contentContainer {
+    flex-direction: column;
+}
+.individualImage {
+    width: 100%;
+}
+.ingredients {
+    padding: 80px 30px;
+}
+.dryWetFlex {
+    flex-direction: column;
+}
+.col-40 {
+    width: 100%;
+} 
+.dryWetFlex .col-60 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.dryWetFlex .col-1-2 {
+    width: 100%;
+} 
+.dry.col-1-2 {
+    margin-bottom: 30px;
+}
+.dryWetFlex h4 {
+    margin-bottom: 15px;
+}
+.directions {
+    padding: 80px 30px;
+}
+.writersNote .contentContainer {
+    flex-direction: column-reverse;
+}
+.writersNote .col-1-3 {
+    padding-bottom: 66%;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.directionStep p {
+    max-width: 260px;
+}
+.writersNote h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.writersNote .col-2-3 {
+    width: 100%;
+}  
+.helpfulInfo .col-60 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+#adminForm {
+    width: 275px;
+}
+.adminInput input {
+    width: 225px;
+}
+.adminRecipes {
+    padding: 80px 30px;
+}
+.styledRow th:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.adminTable tr th:nth-child(1) {
+    padding: 90px 0;
+}
+.styledRow th:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+th a {
+    line-height: 14px;
+}
+.blankRow {
+    display: none !important;
+}
+.styledRow {
+    flex-direction: column;
+}
+.styledRow th {
+    width: 100% !important;
+}
+.styledRow th:not(:first-child) {
+    padding: 15px 0;
+    padding: 0;
+}
+.styledRow th:nth-child(2) {
+    padding: 20px 0 10px 0;
+}
+.styledRow th:nth-child(3), .styledRow th:nth-child(4) {
+    padding: 8px 0;
+}
+.styledRow th {
+    width: 95% !important;
+    padding-left: 5% !important;
+    font-size: 18px;
+}
+.styledRow th a {
+    font-size: 18px;
+    line-height: 45px;
+}
+.adminAdd .contentContainer {
+    padding: 0;
+}
+#recipeAddForm {
+    padding: 50px 30px;
+}
+#recipeAddForm field:first-child input {
+    width: 150px;
+}
+
+#recipeAddForm field:nth-child(4) input:nth-child(2), #recipeAddForm field:nth-child(5) input:nth-child(2), #recipeAddForm field:nth-child(6) input:nth-child(2) {
+    width: 130px;
+}
+.adminAddIngredients .dryWetFlex {
+    flex-direction: row;
+}
+.dryWetBox {
+    width: 250px;
+}
+.dryWetBox:first-child {
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+.dryWetContainer {
+    flex-direction: column;
+}
+textarea {
+    width: 60%;
+}
+.adminAdd h2 {
+    font-size: 40px;
+}
+.styledRow th:nth-child(2) {
+    font-family: Roboto Medium;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.adminButtonFlex {
+    display: flex;
+    flex-direction: column;
+}
+.adminButtonFlex input:first-child {
+    margin-bottom: 30px !important;
+    margin: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+  
 }
