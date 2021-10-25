@@ -185,7 +185,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
 }
-#hero field {
+#hero form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,14 +194,14 @@ header {
     margin: 0 auto;
     position: relative;
 }
-#hero field label {
+#hero form label {
     color: #fff;
     font-family: 'Roboto Light';
     font-weight: inherit;
     font-size: 24px;
     margin-bottom: 12px;
 }
-.heroPositioning field img {
+.heroPositioning form img {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -519,7 +519,7 @@ header {
 #searchHero h1 {
     position: relative;
 }
-.resultsSearch field {
+.resultsSearch form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -528,21 +528,21 @@ header {
     margin: 0 auto;
     position: relative;
 }
-.resultsSearch field label {
+.resultsSearch form label {
     color: #000;
     font-family: 'Roboto Light';
     font-weight: inherit;
     font-size: 24px;
     margin-bottom: 18px;
 }
-.resultsSearch field input {
+.resultsSearch form input {
     padding: 13px 80px 13px 22px;
     width: 520px;
     border: none;
     border-radius: 50px;
     box-shadow: 0px 2px 10px 6px #00000014;
 }
-.resultsSearch field img {
+.resultsSearch form img {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -807,7 +807,183 @@ header {
     justify-content: center;
     align-items: flex-start;
 }
+
+
+/* ///////////////////////////////////// */
+/* ////////// ADMIN LOGIN CSS ////////// */
+/* ///////////////////////////////////// */
+
+#adminHeader {
+    background: #f2f2f2;
+}
+#adminLogin {
+    height: calc(100vh - 220px);
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#fff 50%, #FFA573 50%);
+}
+#adminForm {
+    padding: 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px 0px #6161616b;
+}
+#adminForm h2 {
+    color: #FF7E36;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+.adminInput {
+    position: relative;
+    margin-bottom: 30px;
+}
+.adminInput label {
+    position: absolute;
+    bottom: 38px;
+    transform: translateY(50%);
+    background: #fff;
+    left: 20px;
+    font-family: Roboto;
+    padding: 0 4px;
+}
+.adminInput input {
+    width: 250px;
+    border: 2px solid #393939;
+    border-radius: 50px;
+    padding: 6px 20px 6px 20px;
+    outline: none;
+}
+#adminForm input[type="submit"] {
+    border: 2px solid #ff7e36;
+    background: #ff7e36;
+    color: #fff;
+    font-family: Roboto Medium;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+  #adminForm input[type="submit"]:hover {
+    background: transparent;
+    color: #ff7e36;
+}
+
+
+/* /////////////////////////////////////// */
+/* ////////// ADMIN RECIPES CSS ////////// */
+/* /////////////////////////////////////// */
+
+.adminRecipes {
+    padding: 80px 0;
+}
+.adminSearch input {
+    padding: 13px 80px 13px 22px;
+    width: 520px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 2px 10px 6px #00000014;
+}
+.adminSearch label {
+    color: #000;
+    font-family: 'Roboto Light';
+    font-weight: inherit;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
   
+.adminSearch img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    background: #fff;
+}
+.adminSearch form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+.adminSearch {
+    margin-top: 60px;
+}
+.adminRecipes h2 {
+    color: #000;
+    padding-left: 65px;
+}
+.styledRow th:first-child {
+    background: url(../media/images/chickenWings.jpg);
+    padding: 35px 16px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.styledRow {
+    border-radius: 50px;
+}
+.styledRow th {
+    background: #FFA573;
+}
+.styledRow th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.styledRow th {
+    color: #fff;
+}
+.adminTable th {
+    font-family: Roboto Medium;
+    font-size: 18px;
+}
+.adminTable tr {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}  
+.adminTable {
+    width: 100%;
+}
+.adminTable tr th:nth-child(5) {
+    width: 10%;
+}
+.adminTable tr th:nth-child(1) {
+    width: 10%;
+    padding: 30px 0;
+}
+.adminTable tr th {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.adminTable tr th:nth-child(2), .adminTable tr th:nth-child(3), .adminTable tr th:nth-child(4) {
+    width: 26.667%;
+}
+.styledRow th:last-child {
+    background: #393939;
+    cursor: pointer;
+}
+.styledRow:not(:last-child) {
+    margin-bottom: 25px;
+}
+ 
+
+
+
 /* //////////////////////////////// */
 /* ////////// FOOTER CSS ////////// */
 /* //////////////////////////////// */
