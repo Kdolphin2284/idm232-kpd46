@@ -124,8 +124,16 @@ textarea {
 }
 input[type="search"], input[type="text"] {
     font-family: Roboto Medium;
+    outline: none;
 
 }
+.desktopFooter {
+    display: block;
+}
+.tabletFooter {
+    display: none;
+}
+  
 
 /* //////////////////////////////// */
 /* ////////// HEADER CSS ////////// */
@@ -175,7 +183,7 @@ header {
 /* /////////////////////////////////////// */
 
 #hero {
-    height: 80vh;
+    height: calc(100vh - 80px);
     background: url('../media/images/recipeHomepageHero3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -248,7 +256,6 @@ header {
     width: calc(100% - 130px);
 }
 #heroContainer .heroPositioning:not(:last-child) {
-    /* margin-bottom: 165px; */
     margin-bottom: 15vh;
 }
 
@@ -266,7 +273,7 @@ header {
     color: #ff7e36;
 }
 #homeRecipeSuggestions {
-    padding: 100px 0;
+    padding: 100px 50px;
 } 
 #homeRecipeSuggestions .contentContainer {
     display: flex;
@@ -592,7 +599,7 @@ header {
     position: relative;
 }
 .helpfulInfo {
-    padding: 80px 0;
+    padding: 80px 50px;
 }
 .helpfulInfo .contentContainer {
     display: flex;
@@ -634,7 +641,7 @@ header {
 }
 .ingredients {
     background: #FFA573;
-    padding: 80px 0;
+    padding: 80px 50px;
 }
 .ingredients h2 {
     font-size: 48px;
@@ -685,6 +692,9 @@ header {
     font-size: 20px;
     margin-left: 5px;
 }
+.ingredients .dryWetFlex {
+    margin: 0;
+}
 .dry field .ingredientCheck:not(:last-child), .wet field .ingredientCheck:not(:last-child) {
     margin-bottom: 15px;
 }  
@@ -697,7 +707,7 @@ header {
     margin-bottom: 5px;
 }
 .directions {
-    padding: 80px 0;
+    padding: 80px 50px;
     position: relative;
 }
 .directionsLabel {
@@ -780,7 +790,7 @@ header {
     position: relative;
 }
 .writersNote {
-    padding: 80px 0;
+    padding: 80px 50px;
     background: #ffa573;
 }
 .writersNote h2 {
@@ -892,7 +902,7 @@ header {
 /* /////////////////////////////////////// */
 
 .adminRecipes {
-    padding: 80px 0;
+    padding: 80px 50px;
 }
 .adminSearch input {
     padding: 13px 80px 13px 22px;
@@ -979,8 +989,17 @@ header {
     justify-content: flex-start;
     padding-left: 20px;
 }
-.adminTable tr th:nth-child(2), .adminTable tr th:nth-child(3), .adminTable tr th:nth-child(4) {
+.adminTable tr th:nth-child(2)  {
     width: 26.667%;
+}
+.adminTable tr th:nth-child(5) {
+    width: 15%;
+}
+.adminTable tr th:nth-child(4) {
+    width: 15%;
+}
+.adminTable tr th:nth-child(3) {
+    width: 15%;
 }
 .styledRow th:last-child {
     background: #393939;
@@ -1244,4 +1263,200 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* /////////////////////////////////// */
+/* ////////// MEDIA QUERIES ////////// */
+/* /////////////////////////////////// */
+
+@media only screen and (max-width: 1040px) {
+#hero h2 {
+    font-size: 40px;
+}
+#heroArrow img {
+    margin-right: 50px;
+}
+#hero h1 {
+    font-size: 65px;
+}
+#homeRecipeSuggestions h2 {
+    font-size: 45px;
+    max-width: 720px;
+}
+.foodCard h4 {
+    font-size: 18px;
+}
+.foodCard p {
+    font-size: 14px;
+}
+.recipeStars img {
+    padding: 10px 0;
+    padding: 0;
+}
+header {
+    height: 70px;
+}
+.navLinks a {
+    padding: 5px 24px;
+}
+#recipeSuggestionsLink a {
+    padding: 5px 18px;
+    color: #FF7E36;
+    border: 2px solid #FF7E36;
+    border-radius: 50px;
+    font-family: 'Roboto Medium';
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #FF7E36, #FF7E36 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: all .5s ease;
+}
+#hero {
+    height: calc(100vh - 70px);
+}
+.recipeFlex {
+    width: 68%;
+}
+#recipes {
+    padding: 100px 50px;
+    width: auto;
+}
+.col-1-3 {
+    width: 32%;
+}
+.foodCard {
+    width: 47.5%;
+}
+.formSubmit input {
+    font-size: 16px;
+}
+#filterForm .filteredIngredients ul li, #filterForm .filteredRecipes ul li {
+    font-size: 16px;
+}
+#filterForm label {
+    font-size: 18px;
+}
+.filterRecipe button, .filterIngredient button {
+    font-size: 14px;
+}
+#filterForm {
+    margin: 0 40px 0 0;
+}
+#recipeHero h1 {
+    font-size: 60px;
+}
+#recipeHero {
+    padding: 60px 0;
+}
+.recipeFlex .foodCard:nth-last-child(-n+3) {
+    margin-bottom: 5%;
+}
+.recipeFlex .foodCard:nth-last-child(-n+2) {
+    margin: 0;
+}
+#searchHero h1 {
+    font-size: 60px;
+}
+#searchHero {
+    padding: 60px 0;
+}
+#recipeSuggestionsContainer .foodCard {
+    width: 30%;
+}
+#individualHero h1 {
+    font-size: 60px;
+}
+#individualHero {
+    padding: 60px 0px;
+}
+.helpfulInfo h2 {
+    font-size: 40px;
+}
+.helpfulInfo p {
+    font-size: 18px;
+}
+.ingredients h2 {
+    font-size: 40px;
+}
+.ingredientCheck label {
+    font-size: 18px;
+}
+.directionsLabel h2 {
+    font-size: 40px;
+}
+.directionStep h4 {
+    font-size: 20px;
+}
+.directionStep p {
+    font-size: 16px;
+    max-width: 600px;
+}
+.directionStep field label {
+    font-size: 16px;
+}
+.writersNote h2 {
+    font-size: 40px;
+}
+.writersNote ul li {
+    font-size: 16px;
+}
+#adminLogin {
+    height: calc(100vh - 170px);
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#fff 50%, #FFA573 50%);
+}
+.desktopFooter {
+    display: none;
+}
+.tabletFooter {
+    display: block;
+}
+footer {
+    height: 100px;
+}
+.adminTable th {
+    font-size: 14px;
+}
+th a {
+    font-size: 14px;
+}
+.adminTable tr th:nth-child(3) {
+    width: 20%;
+}
+.adminTable tr th:nth-child(4) {
+    width: 14%;
+} 
+.adminRecipes h2 {
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+.adminTable tr th:nth-child(5) {
+    width: 15%;
+}
+.adminTable tr th:nth-child(1) {
+    width: 15%;
+}
+.adminAdd .contentContainer {
+    padding: 0 50px;
+    width: auto;
+} 
+#recipeAddForm label {
+    font-size: 16px;
+}
+#recipeAddForm field:first-child input {
+    width: 350px;
+}
+.dryWetBox {
+    width: 200px;
+}
+textarea {
+    width: 75%;
+}
 }
