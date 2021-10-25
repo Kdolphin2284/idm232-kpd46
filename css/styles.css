@@ -371,9 +371,9 @@ header {
     position: relative;
 }
 #recipes {
-    padding: 100px 0;
+    padding: 100px 50px;
     max-width: 1200px;
-    width: 100%;
+    width: auto;
     display: flex;
     margin: 0 auto;
 }
@@ -383,7 +383,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 100%;
+    width: auto;
 } 
 .recipeFlex .foodCard {
     margin-bottom: 5%;
