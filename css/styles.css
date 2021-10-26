@@ -177,7 +177,12 @@ header {
     background-position: 0 100%;
     color: #ffffff;
 }
-  
+.navLinks ul {
+    display: flex;
+}
+.navLinks ul li:not(:last-child) {
+    margin-right: 15px;
+}
 
 
 /* /////////////////////////////////////// */
@@ -1464,6 +1469,10 @@ textarea {
 }
 
 @media only screen and (max-width: 767px) {
+.navLinks a {
+    padding: 4px 17px;
+    font-size: 18px;
+}
 #hero h1 {
     font-size: 41px;
     text-align: center;
@@ -1654,7 +1663,7 @@ th a {
     padding: 20px 0 10px 0;
 }
 .styledRow th:nth-child(3), .styledRow th:nth-child(4) {
-    padding: 8px 0;
+    padding: 10px 0;
 }
 .styledRow th {
     width: 95% !important;
@@ -1674,7 +1683,6 @@ th a {
 #recipeAddForm field:first-child input {
     width: 150px;
 }
-
 #recipeAddForm field:nth-child(4) input:nth-child(2), #recipeAddForm field:nth-child(5) input:nth-child(2), #recipeAddForm field:nth-child(6) input:nth-child(2) {
     width: 130px;
 }
@@ -1714,5 +1722,15 @@ textarea {
 }
 #heroArrow {
     flex-direction: column;
+}
+.styledRow th:nth-child(4) {
+    padding-bottom: 20px;
+}
+.adminSearch label {
+    color: #000;
+    font-family: 'Roboto Light';
+    font-weight: inherit;
+    font-size: 18px;
+    margin-bottom: 12px;
 }
 }
