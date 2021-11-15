@@ -1,0 +1,1736 @@
+/* /////////////////////////// */
+/* ////////// FONTS ////////// */
+/* /////////////////////////// */
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url('../fonts/Roboto-Bold.woff2') format("woff2"),
+         url('../fonts/Roboto-Bold.woff') format("woff"),
+         url('../fonts/Roboto-Bold.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Roboto Medium";
+    src: url('../fonts/Roboto-Medium.woff2') format("woff2"),
+         url('../fonts/Roboto-Medium.woff') format("woff"),
+         url('../fonts/Roboto-Medium.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Roboto Light";
+    src: url('../fonts/Roboto-Light.woff2') format("woff2"),
+         url('../fonts/Roboto-Light.woff') format("woff"),
+         url('../fonts/Roboto-Light.ttf') format("truetype"); 
+}
+@font-face {
+    font-family: "Arbutus Slab";
+    src: url('../fonts/arbutus-slab-regular.woff2') format("woff2"),
+         url('../fonts/arbutus-slab-regular.woff') format("woff"),
+         url('../fonts/arbutus-slab-regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Font Awesome Brands";
+    src: url('../fonts/webfonts/fa-brands-400.woff2') format("woff2"),
+         url('../fonts/webfonts/fa-brands-400.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Font Awesome Duotone";
+    src: url('../fonts/webfonts/fa-duotone-900.woff2') format("woff2"),
+         url('../fonts/webfonts/fa-duotone-900.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Font Awesome Light";
+    src: url('../fonts/webfonts/fa-light-300.woff2') format("woff2"),
+         url('../fonts/webfonts/fa-light-300.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Font Awesome Regular";
+    src: url('../fonts/webfonts/fa-regular-400.woff2') format("woff2"),
+         url('../fonts/webfonts/fa-regular-400.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Font Awesome Solid";
+    src: url('../fonts/webfonts/fa-solid-900.woff2') format("woff2"),
+         url('../fonts/webfonts/fa-solid-900.ttf') format("truetype");
+}
+@font-face {
+    font-family: "Font Awesome Thin";
+    src: url('../fonts/webfonts/fa-thin-100.woff2') format("woff2"),
+         url('../fonts/webfonts/fa-thin-100.ttf') format("truetype");
+}
+
+
+/* ///////////////////////////////// */
+/* ////////// GENERAL CSS ////////// */
+/* ///////////////////////////////// */
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Arbutus Slab';
+    font-size: 80px;
+}
+h2 {
+    margin: 0;
+    color: #fff;
+    font-family: 'Arbutus Slab';
+    font-size: 60px;
+    font-weight: lighter;
+}
+h3 {
+    margin: 0;
+}
+h4 {
+    margin: 0;
+}
+p {
+    margin: 0;
+    color: #000;
+    font-family: 'Roboto Light';
+    font-size: 18px;
+} 
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+.contentContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+textarea {
+    font-family: Roboto Light;
+}
+.col-2-3 {
+    width: 66%;
+}
+.col-60 {
+    width: 60%;
+}
+.col-1-2 {
+    width: 50%;
+}
+.col-40 {
+    width: 40%;
+}
+.col-1-3 {
+    width: 33%;
+}
+input[type="search"], input[type="text"] {
+    font-family: Roboto Medium;
+    outline: none;
+
+}
+.desktopFooter {
+    display: block;
+}
+.tabletFooter {
+    display: none;
+}
+.mobileFooter {
+    display: none;
+} 
+
+/* //////////////////////////////// */
+/* ////////// HEADER CSS ////////// */
+/* //////////////////////////////// */
+
+header {
+    height: 80px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+.flexHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 65px;
+}
+.navLinks a {
+    padding: 7px 32px;
+    color: #FF7E36;
+    border: 2px solid #FF7E36;
+    border-radius: 50px;
+    font-family: 'Roboto Medium';
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #FF7E36, #FF7E36 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: all .5s ease;
+}
+.navLinks a:hover {
+    background-position: 0 100%;
+    color: #ffffff;
+}
+.navLinks ul {
+    display: flex;
+}
+.navLinks ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+
+/* /////////////////////////////////////// */
+/* ////////// HOMEPAGE HERO CSS ////////// */
+/* /////////////////////////////////////// */
+
+#hero {
+    height: calc(100vh - 80px);
+    background: url('../media/images/recipeHomepageHero3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+#heroContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#hero form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+#hero form label {
+    color: #fff;
+    font-family: 'Roboto Light';
+    font-weight: inherit;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.heroPositioning form img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    background: #fff;
+}
+#homeSearch {
+    padding: 13px 80px 13px 22px;
+    width: 520px;
+    border: none;
+    border-radius: 50px;
+}
+#heroArrow {
+    display: flex;
+    flex-direction: row-reverse;
+    width: auto;
+    flex-wrap: wrap;
+}
+#heroArrow img {
+    margin-right: 90px;
+}
+#hero::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+}
+.heroPositioning {
+    position: relative;
+    width: calc(100% - 130px);
+}
+#heroContainer .heroPositioning:not(:last-child) {
+    margin-bottom: 15vh;
+}
+
+
+/* ///////////////////////////////////////////////// */
+/* ////////// HOME RECIPE SUGGESTIONS CSS ////////// */
+/* ///////////////////////////////////////////////// */
+
+#homeRecipeSuggestions h2 {
+    color: #393939;
+    margin-bottom: 50px;
+    max-width: 955px;
+}
+#homeRecipeSuggestions h2 span {
+    color: #ff7e36;
+}
+#homeRecipeSuggestions {
+    padding: 100px 50px;
+} 
+#homeRecipeSuggestions .contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#recipeSuggestionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.foodCard .cardImage {
+    padding-bottom: 60%;
+    background-image: url(../media/images/chickenWings.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#recipeSuggestionsContainer .foodCard:nth-child(2) .cardImage {
+    background-image: url(../media/images/stirfry.jpg);
+}
+#recipeSuggestionsContainer .foodCard:nth-child(3) .cardImage {
+    background-image: url(../media/images/burger.jpg);
+}
+.foodCard {
+    width: 30%;
+    box-shadow: 0px 0px 15px 6px #00000014;
+}
+.foodCard a {
+    width: 100%;
+}
+.cardContent h4 {
+    font-family: 'Roboto Bold';
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #000;
+}
+.recipeStars {
+    margin: 10px 0;
+}
+.cardContent {
+    padding: 20px 15px;
+}
+#recipeSuggestionsLink {
+    margin: 50px auto 0 auto;
+}
+#recipeSuggestionsLink a {
+    padding: 7px 25px;
+    color: #FF7E36;
+    border: 2px solid #FF7E36;
+    border-radius: 50px;
+    font-family: 'Roboto Medium';
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #FF7E36, #FF7E36 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: all .5s ease;
+}
+#recipeSuggestionsLink a:hover {
+    background-position: 0 100%;
+    color: #ffffff;
+}
+
+/* ////////////////////////////////////// */
+/* ////////// RECIPES PAGE CSS ////////// */
+/* ////////////////////////////////////// */
+
+#recipeHero {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: url(../media/images/recipeHero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+#recipeHero::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+}
+#recipeHero h1 {
+    position: relative;
+}
+#recipes {
+    padding: 100px 50px;
+    max-width: 1200px;
+    width: auto;
+    display: flex;
+    margin: 0 auto;
+}
+.recipeFlex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: auto;
+} 
+.recipeFlex .foodCard {
+    margin-bottom: 5%;
+}
+.recipeFlex .foodCard:nth-last-child(-n+3) {
+    margin: 0;
+}
+.filterRecipe, .filterIngredient {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    position: relative;
+}
+#filterForm {
+    margin: 0 60px 0 0;
+    position: relative;
+}
+#filterForm label {
+    font-size: 22px;
+    font-family: Arbutus Slab;
+    margin-bottom: 15px;
+}
+.filterRecipe input, .filterIngredient input {
+    width: 80%;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 2px 10px 6px #00000014;
+    margin-bottom: 20px;
+    padding: 10px 14px;
+    outline: none;
+}
+.filterRecipe button, .filterIngredient button {
+    background: #ff7e36;
+    color: #fff;
+    border: 2px solid #ff7e36;
+    display: inline-block;
+    width: max-content;
+    padding: 7px 17px;
+    border-radius: 50px;
+    font-family: Roboto Medium;
+    letter-spacing: .5px;
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+}
+.filterRecipe button:hover, .filterIngredient button:hover {
+    color: #ff7e36;
+    background: transparent;
+}
+#filterForm ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px 0;
+}
+#filterForm ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+#filterForm ul li {
+    font-size: 20px;
+    font-family: Arbutus Slab;
+    color: #393939;
+    border: 2px solid #393939;
+    padding: 6px 15px;
+    border-radius: 8px;
+    position: relative;
+}
+#filterForm ul li::before {
+    position: absolute;
+    display: block;
+    top: -10px;
+    left: -10px;
+    content: url(../media/images/filterX.svg);
+} 
+.formSubmit input {
+    color: #ff7e36;
+    border: 2px solid #ff7e36;
+    width: 100%;
+    font-size: 22px;
+    font-family: Arbutus Slab;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.formSubmit input {
+    width: 100%;
+    font-size: 22px;
+    font-family: Arbutus Slab;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #FF7E36;
+    border: 2px solid #FF7E36;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #FF7E36, #FF7E36 50%, transparent 50%);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-size: 201% 100%;
+    background-position: 100%;
+    transition: all .5s ease;
+}
+.formSubmit input:hover {
+    background-position: 0 100%;
+    color: #ffffff;
+}
+.filterRecipe button, .filterIngredient button {
+    cursor: pointer;
+}  
+.recipeFlex .foodCard:nth-child(3n + 2) .cardImage {
+    background-image: url(../media/images/stirfry.jpg);
+}
+.recipeFlex .foodCard:nth-child(3n + 3) .cardImage {
+    background-image: url(../media/images/burger.jpg);
+}
+
+
+/* //////////////////////////////////////// */
+/* ////////// SEARCH RESULTS CSS ////////// */
+/* //////////////////////////////////////// */
+
+#searchHero {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: url(../media/images/searchHero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+#searchHero::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+}
+#searchHero h1 {
+    position: relative;
+}
+.resultsSearch form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+.resultsSearch form label {
+    color: #000;
+    font-family: 'Roboto Light';
+    font-weight: inherit;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+.resultsSearch form input {
+    padding: 13px 80px 13px 22px;
+    width: 520px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 2px 10px 6px #00000014;
+}
+.resultsSearch form img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    background: #fff;
+}
+.resultsSearch {
+    margin-top: 60px;
+}
+
+
+/* //////////////////////////////////////////////// */
+/* ////////// INDIVIDUAL RECIPE PAGE CSS ////////// */
+/* //////////////////////////////////////////////// */
+
+#individualHero {
+    padding: 100px 0;
+    background: url(../media/images/chickenWings.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#individualHero::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+}
+#individualHero h1 {
+    position: relative;
+}
+.helpfulInfo {
+    padding: 80px 50px;
+}
+.helpfulInfo .contentContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.individualImage {
+    width: 85%;
+    padding-bottom: 60%;
+    background: url(../media/images/chickenWings.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.helpfulInfo h2 {
+    font-size: 48px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.helpfulInfo p span {
+    font-family: Roboto Bold;
+    margin-right: 5px;
+}
+.helpfulInfo p:not(:last-child) {
+    margin-bottom: 15px;
+}
+.ratingFlex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.ratingFlex img {
+    margin-bottom: 16px;
+}
+.helpfulInfo p {
+    font-size: 20px;
+}
+.ratingFlex {
+    margin-bottom: 20px;
+}
+.ingredients {
+    background: #FFA573;
+    padding: 80px 50px;
+}
+.ingredients h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+.ingredients h4 {
+    color: #fff;
+    font-family: Roboto Medium;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+.dryWetFlex {
+    display: flex;
+}
+.ingredientCheck {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ingredientCheck input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 6px;
+    padding: 5px;
+    border: 2px solid #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ingredientCheck input[type="checkbox"]::after {
+    font-family: Font Awesome Solid;
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 16px;
+    display: none;
+    color: #fff;
+}
+.ingredientCheck input[type="checkbox"]:hover {
+    background: rgba(255,255,255,.4);
+}
+.dryWetFlex label {
+    color: #fff;
+    font-family: Roboto Light;
+    font-size: 20px;
+    margin-left: 5px;
+}
+.ingredients .dryWetFlex {
+    margin: 0;
+}
+.dry field .ingredientCheck:not(:last-child), .wet field .ingredientCheck:not(:last-child) {
+    margin-bottom: 15px;
+}  
+.ingredientCheck input[type="checkbox"]:checked::after {
+    display: block;
+}
+.directionsLabel h2 {
+    color: #000;
+    font-size: 48px;
+    margin-bottom: 5px;
+}
+.directions {
+    padding: 80px 50px;
+    position: relative;
+}
+.directionsLabel {
+    margin-bottom: 40px;
+}
+.directionStep h4 {
+    font-size: 24px;
+    font-family: Arbutus Slab;
+    font-weight: 400;
+}
+.directionStep p {
+    max-width: 700px;
+    border-left: 6px solid #ff7e36;
+    padding-left: 12px;
+    margin: 8px 0;
+    line-height: 22px;
+}
+.directionStep field {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+.directionStep field label {
+    margin-right: 20px;
+    font-family: Arbutus Slab;
+    font-size: 18px;
+    margin-left: 18px;
+}
+.directions .directionStep:not(:last-child) {
+    margin-bottom: 40px;
+}
+.directionStep field {
+    margin-top: 10px;
+}
+.directionStep input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 50px;
+    padding: 5px;
+    border: 2px solid #FF7E36;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.directionStep input[type="checkbox"]::after {
+    font-family: Font Awesome Solid;
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 16px;
+    display: none;
+    color: #ff7e36;
+}
+.directionStep input[type="checkbox"]:hover {
+    background: #ff7e361f;
+}
+.directionStep input[type="checkbox"]:checked::after {
+    display: block;
+    color: #fff;
+}
+.directionStep input[type="checkbox"]:checked {
+    background: #ff7e36;
+}
+.directions::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #FFA573;
+    clip-path: polygon(90% 0%, 90% 100%, 88% 100%, 88% 0%, 90% 0%)
+}
+.directions .contentContainer {
+    position: relative;
+}
+.writersNote {
+    padding: 80px 50px;
+    background: #ffa573;
+}
+.writersNote h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.writersNote ul li {
+    list-style: circle;
+    color: #fff;
+    font-size: 18px;
+    font-family: Roboto Light;
+    padding-left: 15px;
+}
+.writersNote ul {
+    margin-left: 15px;
+}
+.writersNote .contentContainer {
+    display: flex;
+}
+.writersNote .col-1-3 {
+    padding-bottom: 20%;
+    width: 33%;
+    background: url(../media/images/chickenWings.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.writersNote .col-2-3 ul {
+    max-width: 600px;
+}
+.writersNote .col-2-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* ///////////////////////////////////// */
+/* ////////// ADMIN LOGIN CSS ////////// */
+/* ///////////////////////////////////// */
+
+#adminHeader {
+    background: #f2f2f2;
+}
+#adminLogin {
+    height: calc(100vh - 220px);
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#fff 50%, #FFA573 50%);
+}
+#adminForm {
+    padding: 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px 0px #6161616b;
+}
+#adminForm h2 {
+    color: #FF7E36;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+.adminInput {
+    position: relative;
+    margin-bottom: 30px;
+}
+.adminInput label {
+    position: absolute;
+    bottom: 38px;
+    transform: translateY(50%);
+    background: #fff;
+    left: 20px;
+    font-family: Roboto;
+    padding: 0 4px;
+}
+.adminInput input {
+    width: 250px;
+    border: 2px solid #393939;
+    border-radius: 50px;
+    padding: 6px 20px 6px 20px;
+    outline: none;
+}
+#adminForm input[type="submit"] {
+    border: 2px solid #ff7e36;
+    background: #ff7e36;
+    color: #fff;
+    font-family: Roboto Medium;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+  #adminForm input[type="submit"]:hover {
+    background: transparent;
+    color: #ff7e36;
+}
+
+
+/* /////////////////////////////////////// */
+/* ////////// ADMIN RECIPES CSS ////////// */
+/* /////////////////////////////////////// */
+
+.adminRecipes {
+    padding: 80px 50px;
+}
+.adminSearch input {
+    padding: 13px 80px 13px 22px;
+    width: 520px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 2px 10px 6px #00000014;
+}
+.adminSearch label {
+    color: #000;
+    font-family: 'Roboto Light';
+    font-weight: inherit;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+  
+.adminSearch img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-right: 25px;
+    background: #fff;
+}
+.adminSearch form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 auto;
+    position: relative;
+}
+.adminSearch {
+    margin-top: 60px;
+}
+.adminRecipes h2 {
+    color: #000;
+    padding-left: 65px;
+}
+.styledRow th:first-child {
+    background: url(../media/images/chickenWings.jpg);
+    padding: 35px 16px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.styledRow {
+    border-radius: 50px;
+}
+.styledRow th {
+    background: #FFA573;
+}
+.styledRow th:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.styledRow th {
+    color: #fff;
+}
+.adminTable th {
+    font-family: Roboto Medium;
+    font-size: 18px;
+}
+.adminTable tr {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}  
+.adminTable {
+    width: 100%;
+}
+.adminTable tr th:nth-child(5) {
+    width: 10%;
+}
+.adminTable tr th:nth-child(1) {
+    width: 10%;
+    padding: 30px 0;
+}
+.adminTable tr th {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.adminTable tr th:nth-child(2)  {
+    width: 26.667%;
+}
+.adminTable tr th:nth-child(5) {
+    width: 15%;
+}
+.adminTable tr th:nth-child(4) {
+    width: 15%;
+}
+.adminTable tr th:nth-child(3) {
+    width: 15%;
+}
+.styledRow th:last-child {
+    background: #393939;
+    cursor: pointer;
+}
+.styledRow:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+
+/* ////////////////////////////////////////// */
+/* ////////// ADMIN ADD RECIPE CSS ////////// */
+/* ////////////////////////////////////////// */
+
+.adminAdd h2 {
+    color: #000;
+    margin: 60px 0;
+    padding-left: 65px;
+}
+#recipeAddForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px;
+    background: #f2f2f2;
+    margin-bottom: 80px;
+}
+#cookingLevel option:not(:first-child), #adminRating option:not(:first-child) {
+    background: #FFA573;
+    color: #fff;
+}
+select#cookingLevel, select#adminRating {
+    background: #fff;
+    border: none;
+    padding: 5px 15px;
+    font-family: Roboto Medium;
+}
+#recipeAddForm label {
+    font-family: Roboto Medium;
+    margin-right: 20px;
+}
+#recipeAddForm field:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#recipeAddForm field input {
+    border: none;
+    outline: none;
+}
+#recipeAddForm field:first-child input {
+    width: 600px;
+} 
+#recipeAddForm field {
+    margin-bottom: 40px;
+}  
+#recipeAddForm field input[type="text"] {
+    padding: 8px;
+    font-family: Roboto Medium;
+}
+.dryWetFlex {
+    margin-left: 104.7167px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.radioFlex label {
+    color: #000;
+}
+#ingredientSubmit {
+    margin-left: 104.7167px;
+    color: #fff;
+    background: #FF7E36;
+    border: 2px solid #FF7E36 !important;
+    padding: 4px 20px;
+    border-radius: 50px;
+    font-family: Roboto Medium;
+    font-size: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+#ingredientSubmit:hover {
+    background: transparent;
+    color: #ff7e36;
+}
+.dryWetContainer {
+    display: flex;
+    margin-bottom: 40px;
+}
+.dryWetBox:first-child {
+    margin-right: 30px;
+}
+.dryWetBox {
+    padding: 20px;
+    background: #fff;
+    padding: 20px 20px 40px 20px;
+    width: 300px;
+}
+.dryWetBox h3 {
+    margin: 0;
+    font-family: Roboto Medium;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+#imageUpload {
+    display: none;
+}
+#recipeAddForm field:nth-child(8) label:nth-child(2) {
+    margin: 0;
+    padding: 10px 15px;
+    background: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+.directionsField {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+.directionsAddStep {
+    margin-left: 92.65px;
+}
+#directionsAddSubmit {
+    margin-left: 92.65px;
+    margin-bottom: 15px;
+    border: 2px solid #ff7e36 !important;
+    background: #ff7e36;
+    color: #fff;
+    padding: 4px 20px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: Roboto Medium;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#directionsAddSubmit:hover {
+    background: transparent;
+    color: #ff7e36;
+}
+.directionsAddStep ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.directionsAddStep ul li {
+    background: #FFA573;
+    color: #fff;
+    display: inline-block;
+    padding: 12px;
+    font-family: Roboto Medium;
+    max-width: 300px;
+    position: relative;
+}
+.directionsAddStep ul {
+    display: flex;
+    flex-direction: column;
+}  
+.directionsAddStep ul li::before {
+    position: absolute;
+    display: block;
+    content: url(../media/images/adminAddRecipeX.svg);
+    top: -8px;
+    left: -10px;
+}
+#recipeAddForm field:nth-child(10) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#recipeFormSubmit {
+    background: #393939;
+    border: 2px solid #393939;
+    color: #fff;
+    font-family: Arbutus Slab;
+    padding: 10px 30px;
+    font-size: 30px;
+    border-radius: 12px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+#recipeFormSubmit:hover {
+    color: #393939;
+    background: transparent;
+}
+
+
+/* //////////////////////////////////////////////// */
+/* ////////// ADMIN EDIT DELETE PAGE CSS ////////// */
+/* //////////////////////////////////////////////// */
+
+.dryWetBox ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.dryWetBox ul li {
+    font-family: Roboto Light;
+}
+.imagePreview {
+    width: 200px;
+    padding-bottom: 150px;
+    background: url(../media/images/chickenWings.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.dryWetContainer + field {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.adminButtonFlex input:nth-child(2) {
+    background: #ff5959 !important;
+    border-color: #fe5858 !important;
+}
+  .adminButtonFlex input:nth-child(2):hover {
+    color: #ff5959 !important;
+    background: transparent !important;
+}
+.adminButtonFlex {
+    margin: 0 auto;
+}
+.adminButtonFlex input:not(:last-child) {
+    margin-right: 30px !important;
+}
+.dryWetBox ul li:hover {
+    color: #ff5959;
+    cursor: pointer;
+}
+.directionsAddStep ul li:hover {
+    background: #ff5959;
+    cursor: pointer;
+}
+.directionsAddStep ul li:hover::before {
+    display: none;
+}
+.directionsAddStep ul li::after {
+    position: absolute;
+    display: none;
+    content: url(../media/images/adminEditDeleteRecipeX.svg);
+    top: -8px;
+    left: -10px;
+}
+.directionsAddStep ul li:hover::after {
+    display: block;
+}
+th a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+    line-height: 56px;
+}
+
+
+/* //////////////////////////////// */
+/* ////////// FOOTER CSS ////////// */
+/* //////////////////////////////// */
+
+footer {
+    height: 140px;
+    background: #393939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* /////////////////////////////////// */
+/* ////////// MEDIA QUERIES ////////// */
+/* /////////////////////////////////// */
+
+@media only screen and (max-width: 1040px) {
+#hero h2 {
+    font-size: 40px;
+}
+#heroArrow img {
+    margin-right: 50px;
+}
+#hero h1 {
+    font-size: 65px;
+}
+#homeRecipeSuggestions h2 {
+    font-size: 45px;
+    max-width: 720px;
+}
+.foodCard h4 {
+    font-size: 18px;
+}
+.foodCard p {
+    font-size: 14px;
+}
+.recipeStars img {
+    padding: 10px 0;
+    padding: 0;
+}
+header {
+    height: 70px;
+}
+.navLinks a {
+    padding: 5px 24px;
+}
+#recipeSuggestionsLink a {
+    padding: 5px 18px;
+    color: #FF7E36;
+    border: 2px solid #FF7E36;
+    border-radius: 50px;
+    font-family: 'Roboto Medium';
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #FF7E36, #FF7E36 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: all .5s ease;
+}
+#hero {
+    height: calc(100vh - 70px);
+}
+.recipeFlex {
+    width: 68%;
+}
+#recipes {
+    padding: 100px 50px;
+    width: auto;
+}
+.col-1-3 {
+    width: 32%;
+}
+.foodCard {
+    width: 47.5%;
+}
+.formSubmit input {
+    font-size: 16px;
+}
+#filterForm .filteredIngredients ul li, #filterForm .filteredRecipes ul li {
+    font-size: 16px;
+}
+#filterForm label {
+    font-size: 18px;
+}
+.filterRecipe button, .filterIngredient button {
+    font-size: 14px;
+}
+#filterForm {
+    margin: 0 40px 0 0;
+}
+#recipeHero h1 {
+    font-size: 60px;
+}
+#recipeHero {
+    padding: 60px 0;
+}
+.recipeFlex .foodCard:nth-last-child(-n+3) {
+    margin-bottom: 5%;
+}
+.recipeFlex .foodCard:nth-last-child(-n+2) {
+    margin: 0;
+}
+#searchHero h1 {
+    font-size: 60px;
+}
+#searchHero {
+    padding: 60px 0;
+}
+#recipeSuggestionsContainer .foodCard {
+    width: 30%;
+}
+#individualHero h1 {
+    font-size: 60px;
+}
+#individualHero {
+    padding: 60px 0px;
+}
+.helpfulInfo h2 {
+    font-size: 40px;
+}
+.helpfulInfo p {
+    font-size: 18px;
+}
+.ingredients h2 {
+    font-size: 40px;
+}
+.ingredientCheck label {
+    font-size: 18px;
+}
+.directionsLabel h2 {
+    font-size: 40px;
+}
+.directionStep h4 {
+    font-size: 20px;
+}
+.directionStep p {
+    font-size: 16px;
+    max-width: 600px;
+}
+.directionStep field label {
+    font-size: 16px;
+}
+.writersNote h2 {
+    font-size: 40px;
+}
+.writersNote ul li {
+    font-size: 16px;
+}
+#adminLogin {
+    height: calc(100vh - 170px);
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#fff 50%, #FFA573 50%);
+}
+.desktopFooter {
+    display: none;
+}
+.tabletFooter {
+    display: block;
+}
+footer {
+    height: 100px;
+}
+.adminTable th {
+    font-size: 14px;
+}
+th a {
+    font-size: 14px;
+}
+.adminTable tr th:nth-child(3) {
+    width: 20%;
+}
+.adminTable tr th:nth-child(4) {
+    width: 14%;
+} 
+.adminRecipes h2 {
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+.adminTable tr th:nth-child(5) {
+    width: 15%;
+}
+.adminTable tr th:nth-child(1) {
+    width: 15%;
+}
+.adminAdd .contentContainer {
+    padding: 0 50px;
+    width: auto;
+} 
+#recipeAddForm label {
+    font-size: 16px;
+}
+#recipeAddForm field:first-child input {
+    width: 350px;
+}
+.dryWetBox {
+    width: 200px;
+}
+textarea {
+    width: 75%;
+}
+}
+
+@media only screen and (max-width: 767px) {
+.navLinks a {
+    padding: 4px 17px;
+    font-size: 18px;
+}
+#hero h1 {
+    font-size: 41px;
+    text-align: center;
+}
+#hero h2 {
+    text-align: center;
+}
+#heroArrow img {
+    margin-right: 0;
+    margin-top: 40px;
+}
+.heroPositioning {
+    width: calc(100% - 60px);
+}
+#heroContainer .heroPositioning:not(:last-child) {
+    margin-bottom: 10vh;
+}
+#hero form label {
+    font-size: 20px;
+}
+#homeSearch {
+    padding: 13px 64px 13px 22px;
+    width: 300px;
+}
+#heroArrow {
+    justify-content: center;
+    align-items: center;
+}
+#hero h2 {
+    font-size: 34px;
+}
+#homeRecipeSuggestions h2 {
+    font-size: 36px;
+}
+#recipeSuggestionsContainer .foodCard {
+    width: 100%;
+}
+#homeRecipeSuggestions {
+    padding: 100px 30px;
+}
+#recipeSuggestionsContainer {
+    flex-wrap: wrap;
+}
+#recipeSuggestionsContainer .foodCard:not(:last-child) {
+    margin-bottom: 30px;
+} 
+.tabletFooter {
+    display: none;
+}
+.mobileFooter {
+    display: block;
+}
+.flexHeader {
+    padding: 0 30px;
+}
+#recipes {
+    flex-direction: column;
+} 
+#recipes .col-1-3 {
+    width: 100%;
+}
+#filterForm {
+    margin: 0;
+    margin-bottom: 50px;
+}
+#recipes {
+    padding: 100px 30px;
+}
+.recipeFlex {
+    width: 100%;
+}
+.foodCard {
+    width: 100%;
+}
+#recipes .recipeFlex .foodCard:last-child {
+    margin: 0;
+}
+.recipeFlex .foodCard:nth-last-child(-n+2) {
+    margin-bottom: 30px;
+}
+.recipeFlex .foodCard:not(:last-child) {
+    margin-bottom: 30px !important;
+}
+.resultsSearch form label {
+    font-size: 20px;
+}
+#recipeHero h1, #searchHero h1 {
+    font-size: 40px;
+}
+#individualHero h1 {
+    font-size: 28px;
+}
+
+.helpfulInfo {
+    /* padding: 80px 50px; */
+    padding: 80px 30px;
+}
+.helpfulInfo .contentContainer {
+    flex-direction: column;
+}
+.individualImage {
+    width: 100%;
+}
+.ingredients {
+    padding: 80px 30px;
+}
+.dryWetFlex {
+    flex-direction: column;
+}
+.col-40 {
+    width: 100%;
+} 
+.dryWetFlex .col-60 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.dryWetFlex .col-1-2 {
+    width: 100%;
+} 
+.dry.col-1-2 {
+    margin-bottom: 30px;
+}
+.dryWetFlex h4 {
+    margin-bottom: 15px;
+}
+.directions {
+    padding: 80px 30px;
+}
+.writersNote .contentContainer {
+    flex-direction: column-reverse;
+}
+.writersNote .col-1-3 {
+    padding-bottom: 66%;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.directionStep p {
+    max-width: 260px;
+}
+.writersNote h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.writersNote .col-2-3 {
+    width: 100%;
+}  
+.helpfulInfo .col-60 {
+    width: 100%;
+    margin-bottom: 30px;
+}
+#adminForm {
+    width: 275px;
+}
+.adminInput input {
+    width: 225px;
+}
+.adminRecipes {
+    padding: 80px 30px;
+}
+.styledRow th:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.adminTable tr th:nth-child(1) {
+    padding: 90px 0;
+}
+.styledRow th:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+th a {
+    line-height: 14px;
+}
+.blankRow {
+    display: none !important;
+}
+.styledRow {
+    flex-direction: column;
+}
+.styledRow th {
+    width: 100% !important;
+}
+.styledRow th:not(:first-child) {
+    padding: 15px 0;
+    padding: 0;
+}
+.styledRow th:nth-child(2) {
+    padding: 20px 0 10px 0;
+}
+.styledRow th:nth-child(3), .styledRow th:nth-child(4) {
+    padding: 10px 0;
+}
+.styledRow th {
+    width: 95% !important;
+    padding-left: 5% !important;
+    font-size: 18px;
+}
+.styledRow th a {
+    font-size: 18px;
+    line-height: 45px;
+}
+.adminAdd .contentContainer {
+    padding: 0;
+}
+#recipeAddForm {
+    padding: 50px 30px;
+}
+#recipeAddForm field:first-child input {
+    width: 150px;
+}
+#recipeAddForm field:nth-child(4) input:nth-child(2), #recipeAddForm field:nth-child(5) input:nth-child(2), #recipeAddForm field:nth-child(6) input:nth-child(2) {
+    width: 130px;
+}
+.adminAddIngredients .dryWetFlex {
+    flex-direction: row;
+}
+.dryWetBox {
+    width: 250px;
+}
+.dryWetBox:first-child {
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+.dryWetContainer {
+    flex-direction: column;
+}
+textarea {
+    width: 60%;
+}
+.adminAdd h2 {
+    font-size: 40px;
+}
+.styledRow th:nth-child(2) {
+    font-family: Roboto Medium;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+.adminButtonFlex {
+    display: flex;
+    flex-direction: column;
+}
+.adminButtonFlex input:first-child {
+    margin-bottom: 30px !important;
+    margin: 0;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+#heroArrow {
+    flex-direction: column;
+}
+.styledRow th:nth-child(4) {
+    padding-bottom: 20px;
+}
+.adminSearch label {
+    color: #000;
+    font-family: 'Roboto Light';
+    font-weight: inherit;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+}

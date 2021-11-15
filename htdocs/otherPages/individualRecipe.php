@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <div class="flexHeader">
+                <div class="logoContainer">
+                    <a href="../homepage.html">
+                        <img src="../media/images/recipeLogo.svg">
+                    </a>
+                </div>
+                <div class="navLinks">
+                    <ul>
+                        <li>
+                            <a href="recipes.html">Recipes</a>
+                        </li>
+                        <li>
+                            <a href="adminLogin.html">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section id="individualHero">
+            <h1>Spicy Chicken Wings</h1>
+        </section>
+        <section class="helpfulInfo">
+           <div class="contentContainer">
+               <div class="col-60">
+                   <div class="individualImage"></div>
+               </div>
+               <div class="col-40">
+                   <h2>Helpful Info</h2>
+                   <p><span>Difficulty Level: </span>Beginner</p>
+                   <div class="ratingFlex">
+                       <p><span>Rating: </span></p>
+                       <img src="../media/images/recipeStars.svg" alt="Recipe star rating image">
+                   </div>
+                   <p><span>Time to Prep: </span>10 minutes</p>
+                   <p><span>Time to Cook: </span>15 minutes</p>
+                   <p><span>Total Time: </span> 25 minutes</p>
+               </div>
+           </div>
+        </section>
+        <section class="ingredients">
+           <div class="contentContainer">
+                <h2>Ingredients</h2>
+                <div class="dryWetFlex">
+                    <div class="dry col-1-2">
+                        <h4>Dry</h4>
+                        <field>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="dryIngredient1" name="dryIngredient1" value="">
+                                <label for="dryIngredient1">2 tbspn Crushed Red Pepper</label>
+                            </div>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="dryIngredient2" name="dryIngredient2" value="">
+                                <label for="dryIngredient2">1 tbsp Garlic Powder</label>
+                            </div>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="dryIngredient3" name="dryIngredient3" value="">
+                                <label for="dryIngredient3">1 tbsp Onion Powder</label>
+                            </div>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="dryIngredient4" name="dryIngredient4" value="">
+                                <label for="dryIngredient4">1/2 tbsp Salt</label>
+                            </div>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="dryIngredient5" name="dryIngredient5" value="">
+                                <label for="dryIngredient5">1 tbsp Pepper</label>
+                            </div>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="dryIngredient6" name="dryIngredient6" value="">
+                                <label for="dryIngredient6">2 tbsp Cayenne Pepper</label>
+                            </div>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="dryIngredient7" name="dryIngredient7" value="">
+                                <label for="dryIngredient7">20 Chicken Wings</label>
+                            </div>
+                        </field>
+                    </div>
+                    <div class="wet col-1-2">
+                        <h4>Wet</h4>
+                        <field>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="wetIngredient1" name="wetIngredient1" value="">
+                                <label for="wetIngredient1">2 tbsp Siracha</label>
+                            </div>
+                            <div class="ingredientCheck">
+                                <input type="checkbox" id="wetIngredient2" name="wetIngredient2" value="">
+                                <label for="wetIngredient2">1 1/2 tbsp Olive Oil</label>
+                            </div>
+                        </field>
+                    </div>
+                </div>
+           </div>
+        </section>
+        <section class="directions">
+           <div class="contentContainer">
+               <div class="directionsLabel">
+                   <h2>Directions</h2>
+                   <p>*for tips, see "Writer's Notes" below</p>
+               </div>
+               <div class="directionStep">
+                   <h4>Step 1</h4>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
+                       faucibus nisl et massa egestas tristique. Morbi volutpat viverra 
+                       massa, consequat placerat est interdum venenatis. Integer eget rutrum 
+                       neque, vel ultrices turpis. Curabitur vestibulum augue a odio lobortis 
+                       tempor. Nullam in odio lorem. Aliquam a lacus velit. Aliquam fringilla 
+                       laoreet magna vel fermentum. Fusce et egestas purus. Curabitur tristique 
+                       risus viverra sollicitudin elementum. </p>
+                    <field>
+                        <input type="checkbox" id="step1" name="step1" value="">
+                        <label for="step1">Finished with this step?</label>
+                    </field>
+               </div>
+               <div class="directionStep">
+                <h4>Step 2</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
+                    faucibus nisl et massa egestas tristique. Morbi volutpat viverra 
+                    massa, consequat placerat est interdum venenatis. Integer eget rutrum 
+                    neque, vel ultrices turpis. Curabitur vestibulum augue a odio lobortis 
+                    tempor. Nullam in odio lorem. Aliquam a lacus velit. Aliquam fringilla 
+                    laoreet magna vel fermentum. Fusce et egestas purus. Curabitur tristique 
+                    risus viverra sollicitudin elementum. </p>
+                 <field>
+                     <input type="checkbox" id="step2" name="step2" value="">
+                     <label for="step2">Finished with this step?</label>
+                 </field>
+                </div>
+                <div class="directionStep">
+                    <h4>Step 3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
+                        faucibus nisl et massa egestas tristique. Morbi volutpat viverra 
+                        massa, consequat placerat est interdum venenatis. Integer eget rutrum 
+                        neque, vel ultrices turpis. Curabitur vestibulum augue a odio lobortis 
+                        tempor. Nullam in odio lorem. Aliquam a lacus velit. Aliquam fringilla 
+                        laoreet magna vel fermentum. Fusce et egestas purus. Curabitur tristique 
+                        risus viverra sollicitudin elementum. </p>
+                    <field>
+                        <input type="checkbox" id="step3" name="step3" value="">
+                        <label for="step3">Finished with this step?</label>
+                    </field>
+                </div>
+                <div class="directionStep">
+                    <h4>Step 4</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
+                        faucibus nisl et massa egestas tristique. Morbi volutpat viverra 
+                        massa, consequat placerat est interdum venenatis. Integer eget rutrum 
+                        neque, vel ultrices turpis. Curabitur vestibulum augue a odio lobortis 
+                        tempor. Nullam in odio lorem. Aliquam a lacus velit. Aliquam fringilla 
+                        laoreet magna vel fermentum. Fusce et egestas purus. Curabitur tristique 
+                        risus viverra sollicitudin elementum. </p>
+                    <field>
+                        <input type="checkbox" id="step4" name="step4" value="">
+                        <label for="step4">Finished with this step?</label>
+                    </field>
+                </div>
+                <div class="directionStep">
+                    <h4>Step 5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam 
+                        faucibus nisl et massa egestas tristique. Morbi volutpat viverra 
+                        massa, consequat placerat est interdum venenatis. Integer eget rutrum 
+                        neque, vel ultrices turpis. Curabitur vestibulum augue a odio lobortis 
+                        tempor. Nullam in odio lorem. Aliquam a lacus velit. Aliquam fringilla 
+                        laoreet magna vel fermentum. Fusce et egestas purus. Curabitur tristique 
+                        risus viverra sollicitudin elementum. </p>
+                    <field>
+                        <input type="checkbox" id="step5" name="step5" value="">
+                        <label for="step5">Finished with this step?</label>
+                    </field>
+                </div>
+           </div>
+        </section>
+        <section class="writersNote">
+           <div class="contentContainer">
+               <div class="col-2-3">
+                <h2>Writer's Note</h2>
+                <ul>
+                    <li>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus nisl et massa egestas tristique.
+                    </li>
+                </ul>
+               </div>
+               <div class="col-1-3"></div>
+           </div>
+        </section>
+        <footer>
+            <div class="footerLogo">
+                <img src="../media/images/recipeFooterLogo.svg" alt="Footer logo for this website, TF  |  Tasty Food Co." class="desktopFooter">
+                <img src="../media/images/footerLogoTablet.png" alt="Footer logo for this website, TF  |  Tasty Food Co." class="tabletFooter">
+                <img src="../media/images/mobileFooterLogo.png" alt="Footer logo for this website, TF  |  Tasty Food Co." class="mobileFooter">
+            </div>
+        </footer>
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
