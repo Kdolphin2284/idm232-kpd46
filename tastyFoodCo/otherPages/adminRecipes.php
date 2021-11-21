@@ -60,7 +60,7 @@
 
                             $idOfRow = $row['id'];
 
-                            echo "<tr class='styledRow' ><td style='background: url(\"" . $row['foodImage'] . "\"); background-size: cover; background-position: center;'></td><td>" . $row['recipeName'] . "</td><td>" . $row['cookingLevel'] . "</td><td>" . $row['rating'] 
+                            echo "<tr class='styledRow' ><td style='background: url(\"" . $row['foodImage'] . "\"); background-size: cover; background-position: center;'></td><td>" . htmlspecialchars_decode($row['recipeName'], ENT_QUOTES) . "</td><td>" . $row['cookingLevel'] . "</td><td>" . $row['rating'] 
                             . $stars . "</td><td>" . '<a href=adminEditDeleteRecipe.php?id=' . $idOfRow . '>Edit</a>' ."</td><td>" . '<a href=../includes/deleteRecipe.php?id=' . $idOfRow . '>Delete</a>' . "</td></tr>";
                         } 
 
@@ -76,118 +76,6 @@
 
                     ?>
             </table>
-
-
-
-
-
-                <!-- <table class="adminTable">
-                    <tr class="blankRow">
-                        <th></th>
-                        <th>Recipe Name</th>
-                        <th>Cooking Level</th>
-                        <th>Rating</th>
-                        <th></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
-                    </tr>
-                </table> -->
             </div>
         </section>
         

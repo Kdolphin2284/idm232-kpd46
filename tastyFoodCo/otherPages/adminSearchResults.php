@@ -53,7 +53,7 @@
                             };
                             $rating = $row['rating'];
 
-                        echo "<tr class='styledRow' ><td style='background: url(\"" . $row['foodImage'] . "\"); background-size: cover; background-position: center;'></td><td>" . $row['recipeName'] . "</td><td>" . $row['cookingLevel'] . "</td><td>" . $row['rating'] 
+                        echo "<tr class='styledRow' ><td style='background: url(\"" . $row['foodImage'] . "\"); background-size: cover; background-position: center;'></td><td>" . htmlspecialchars_decode($row['recipeName'], ENT_QUOTES) . "</td><td>" . $row['cookingLevel'] . "</td><td>" . $row['rating'] 
                             . $stars . "</td><td>" . '<a href=adminEditDeleteRecipe.php?id=' . $id . '>Edit</a>' ."</td><td>" . '<a href=../includes/deleteRecipe.php?id=' . $id . '>Delete</a>' . "</td></tr>";
                         } 
                         

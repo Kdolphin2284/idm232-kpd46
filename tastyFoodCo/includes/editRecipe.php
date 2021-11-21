@@ -2,34 +2,20 @@
 
 // include db connection
 include 'dbh.inc.php';
-// mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-// $recipeName = $_POST['nameOfRecipe'];
-// $cookingLevel = $_POST['cookingLevel'];
-// $recipeRating = $_POST['adminRating'];
-// $prepTime = $_POST['timeToPrep'];
-// $cookTime = $_POST['timeToCook'];
-// $dryIngred = $_POST['dryIngred'];
-// $wetIngred = $_POST['wetIngred'];
-// $directions = $_POST['directions'];
-// $writersNote = $_POST['writersNoteAdd'];
-// $sameId = $_POST['identification'];
-
-// echo $writersNote;
 
 if(isset($_POST['submit'])) {
-    $recipeName = $_POST['nameOfRecipe'];
+    $recipeName = htmlspecialchars($_POST['nameOfRecipe'], ENT_QUOTES);
     $cookingLevel = $_POST['cookingLevel'];
     $recipeRating = $_POST['adminRating'];
     $prepTime = $_POST['timeToPrep'];
     $cookTime = $_POST['timeToCook'];
-    $dryIngred = $_POST['dryIngred'];
-    $wetIngred = $_POST['wetIngred'];
-    $directions = $_POST['directions'];
-    $writersNote = $_POST['writersNoteAdd'];
+    $dryIngred = htmlspecialchars($_POST['dryIngred'], ENT_QUOTES);
+    $wetIngred = htmlspecialchars($_POST['wetIngred'], ENT_QUOTES);
+    $directions = htmlspecialchars($_POST['directions'], ENT_QUOTES);
+    $writersNote = htmlspecialchars($_POST['writersNoteAdd'], ENT_QUOTES);
     $sameId = $_POST['identification'];
     $imageBase64 = $_POST['base64Image'];
-    // echo $recipeRating;
     $query = "UPDATE recipestorage SET recipeName = '$recipeName', cookingLevel = '$cookingLevel', 
     rating = '$recipeRating', prepTime = '$prepTime', cookTime = '$cookTime', dryIngred = '$dryIngred', 
     wetIngred = '$wetIngred', directions = '$directions', writersNote = '$writersNote', foodImage = '$imageBase64' 
@@ -39,13 +25,6 @@ if(isset($_POST['submit'])) {
     $query_run = mysqli_query($conn, $query);
 
 }
-
-// $query = "UPDATE 'recipestorage' SET recipeName = '$recipeName', cookingLevel = '$cookingLevel', 
-//     rating = '$recipeRating', prepTime = '$prepTime', cookTime = '$cookTime', dryIngred = '$dryIngred', 
-//     wetIngred = '$wetIngred', directions = '$directions', writersNote = '$writersNote' 
-//     WHERE id = '$sameId'";
-
-//     $query_run = mysqli_query($conn, $query);
 
     if ($query_run) {
         header("Location: ../otherPages/adminRecipes.php?update=success");

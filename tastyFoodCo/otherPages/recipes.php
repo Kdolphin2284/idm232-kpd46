@@ -67,8 +67,8 @@
                         while($row = mysqli_fetch_array($result)){
                             $id = $row['id'];
                             $image = $row['foodImage'];
-                            $recipeName = $row['recipeName'];
-                            $writesNote = substr($row['writersNote'], 0, 50) . "...";
+                            $recipeName = htmlspecialchars_decode($row['recipeName'], ENT_QUOTES);
+                            $writesNote = htmlspecialchars_decode(substr($row['writersNote'], 0, 50) . "...", ENT_QUOTES);
                             $rating = $row['rating'];
                             $ratingHTML = "";
                             for($i = 0; $i<$rating; $i++){

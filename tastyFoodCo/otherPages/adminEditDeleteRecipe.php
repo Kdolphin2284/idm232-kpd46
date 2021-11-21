@@ -49,15 +49,15 @@
             if ($result-> num_rows > 0) {
                 while ($row = $result-> fetch_assoc()) {
 
-                $recipeName = $row['recipeName'];
+                $recipeName = htmlspecialchars_decode($row['recipeName'], ENT_QUOTES);
                 $cookingLevel = $row['cookingLevel'];
                 $recipeRating = $row['rating'];
                 $prepTime = $row['prepTime'];
                 $cookTime = $row['cookTime'];
-                $dryIngred = $row['dryIngred'];
-                $wetIngred = $row['wetIngred'];
-                $directions = $row['directions'];
-                $writersNote = $row['writersNote'];
+                $dryIngred = htmlspecialchars_decode($row['dryIngred'], ENT_QUOTES);
+                $wetIngred = htmlspecialchars_decode($row['wetIngred'], ENT_QUOTES);
+                $directions = htmlspecialchars_decode($row['directions'], ENT_QUOTES);
+                $writersNote = htmlspecialchars_decode($row['writersNote'], ENT_QUOTES);
                 $foodImage = $row['foodImage'];
                 }
             }

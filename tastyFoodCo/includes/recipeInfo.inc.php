@@ -20,17 +20,17 @@
 
     if(isset($_POST['submit'])) {
 
-        $recipeName = $_POST['nameOfRecipe'];
+        $recipeName = htmlspecialchars($_POST['nameOfRecipe'], ENT_QUOTES);
 
         $cookingLevel = $_POST['cookingLevel'];
         $recipeRating = $_POST['adminRating'];
 
         $prepTime = $_POST['timeToPrep'];
         $cookTime = $_POST['timeToCook'];
-        $dryIngred = $_POST['dryIngred'];
-        $wetIngred = $_POST['wetIngred'];
-        $directions = $_POST['directions'];
-        $writersNoteAdd = $_POST['writersNoteAdd'];
+        $dryIngred = htmlspecialchars($_POST['dryIngred'], ENT_QUOTES);
+        $wetIngred = htmlspecialchars($_POST['wetIngred'], ENT_QUOTES);
+        $directions = htmlspecialchars($_POST['directions'], ENT_QUOTES);
+        $writersNoteAdd = htmlspecialchars($_POST['writersNoteAdd'], ENT_QUOTES);
         
         $imageBase64 = $_POST['base64Image'];
         //todo ^^^ store this and put it in <img src="HERE" />

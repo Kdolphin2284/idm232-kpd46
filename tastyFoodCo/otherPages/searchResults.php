@@ -58,14 +58,21 @@
             </div>
             <div class="col-2-3 recipeFlex">
             <?php
+
+            
                         while($row = mysqli_fetch_array($result)){
+                            // echo "test";
                             $id = $row['id'];
                             $image = $row['foodImage'];
-                            $recipeName = $row['recipeName'];
-                            $writesNote = substr($row['writersNote'], 0, 50) . "...";
+                            $recipeName = htmlspecialchars_decode($row['recipeName'], ENT_QUOTES);
+                            $writesNote = htmlspecialchars_decode(substr($row['writersNote'], 0, 50) . "...", ENT_QUOTES);
+                            // echo $recipeName;
+                            // echo $writesNote;
+                            // echo $query;
                             if(!str_contains(strtoupper($recipeName), strtoupper($query) ) && !str_contains(strtoupper($writesNote), strtoupper($query) )){
                                 continue;
-                            };
+                            }
+                            // var_dump($row);
                             $rating = $row['rating'];
                             $ratingHTML = "";
                             for($i = 0; $i<$rating; $i++){

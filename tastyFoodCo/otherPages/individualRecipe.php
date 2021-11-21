@@ -16,15 +16,15 @@ $recipeId = $_GET['id'];
     if ($result-> num_rows > 0) {
         while ($row = $result-> fetch_assoc()) {
 
-        $recipeName = $row['recipeName'];
+        $recipeName = htmlspecialchars_decode($row['recipeName'], ENT_QUOTES);
         $cookingLevel = $row['cookingLevel'];
         $recipeRating = $row['rating'];
         $prepTime = $row['prepTime'];
         $cookTime = $row['cookTime'];
-        $dryIngred = explode(";;", $row['dryIngred']);
-        $wetIngred = explode(";;", $row['wetIngred']);
-        $directions = explode(";;", $row['directions']);
-        $writersNote = $row['writersNote'];
+        $dryIngred = explode(";;", htmlspecialchars_decode($row['dryIngred'], ENT_QUOTES));
+        $wetIngred = explode(";;", htmlspecialchars_decode($row['wetIngred'], ENT_QUOTES));
+        $directions = explode(";;", htmlspecialchars_decode($row['directions'], ENT_QUOTES));
+        $writersNote = htmlspecialchars_decode($row['writersNote'], ENT_QUOTES);
         $foodImage = $row['foodImage'];
         $totalTime = $row['prepTime'] + $row['cookTime'];
         }
