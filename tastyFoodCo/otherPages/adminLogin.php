@@ -14,14 +14,14 @@
         <header id="adminHeader">
             <div class="flexHeader">
                 <div class="logoContainer">
-                    <a href="../homepage.html">
+                    <a href="../index.php">
                         <img src="../media/images/recipeLogo.svg">
                     </a>
                 </div>
             </div>
         </header>
-        <section id="adminLogin">
-            <form id="adminForm" method="GET" action="adminRecipes.html">
+        <section class="adminLogin">
+            <form id="adminForm" class="adminForm" method="GET" action="adminRecipes.php">
                 <h2>Login</h2>
                 <div class="adminInput">
                     <label for="username">Username</label>
@@ -34,13 +34,8 @@
                 <input type="submit" form="adminForm" value="Submit">
             </form>
         </section>
-        <footer>
-            <div class="footerLogo">
-                <img src="../media/images/recipeFooterLogo.svg" alt="Footer logo for this website, TF  |  Tasty Food Co." class="desktopFooter">
-                <img src="../media/images/footerLogoTablet.png" alt="Footer logo for this website, TF  |  Tasty Food Co." class="tabletFooter">
-                <img src="../media/images/mobileFooterLogo.png" alt="Footer logo for this website, TF  |  Tasty Food Co." class="mobileFooter">
-            </div>
-        </footer>
+        
+        <?php include '../includes/footer.php';?>
         
         <script src="script.js" async defer></script>
     </body>

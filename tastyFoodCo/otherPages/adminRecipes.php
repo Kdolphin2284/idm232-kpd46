@@ -1,3 +1,12 @@
+<?php include '../includes/dbh.inc.php';?>
+<?php
+    // Select Information from MySQL
+    $sql = "SELECT * FROM recipestorage";
+    $result = mysqli_query($conn, $sql);
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,25 +20,13 @@
         <link rel="stylesheet" href="../css/all.min.css">
     </head>
     <body>
-        <header id="adminHeader">
-            <div class="flexHeader">
-                <div class="logoContainer">
-                    <a href="../homepage.html">
-                        <img src="../media/images/recipeLogo.svg">
-                    </a>
-                </div>
-                <div class="navLinks">
-                    <ul>
-                        <li>
-                            <a href="adminAddRecipe.html">Add Recipe</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+        
+    <?php include '../includes/dbh.inc.php';?>
+    <?php include '../includes/adminHeader.php';?>
+
         <section class="adminSearch">
-            <form>
-                <label for="homeSearch">Here are your results, happy admining!</label>
+            <form action="adminSearchResults.php" method="GET">
+                <label for="homeSearch">Looking for a specific recipe?</label>
                 <input type="search" id="homeSearch" name="homeSearch">
                 <img src="../media/images/recipeSearch.svg" alt="Search icon">
             </form>
@@ -37,7 +34,54 @@
         <section class="adminRecipes">
             <h2>Recipes</h2>
             <div class="contentContainer">
-                <table class="adminTable">
+
+            <table class="adminTable">
+                    <tr class="blankRow">
+                        <th></th>
+                        <th>Recipe Name</th>
+                        <th>Cooking Level</th>
+                        <th>Rating</th>
+                        <th></th>
+                    </tr>
+                    <?php
+
+                    if ($conn-> connect_error) {
+                        die("Connection failed:" . $conn-> connect_error);
+                    }
+                    
+
+                    $stars = " Stars";
+
+                    $sql = "SELECT id, recipeName, cookingLevel, rating, foodImage FROM recipestorage";
+                    $result = $conn-> query($sql);
+
+                    if ($result-> num_rows > 0) {
+                        while ($row = $result-> fetch_assoc()) {
+
+                            $idOfRow = $row['id'];
+
+                            echo "<tr class='styledRow' ><td style='background: url(\"" . $row['foodImage'] . "\"); background-size: cover; background-position: center;'></td><td>" . $row['recipeName'] . "</td><td>" . $row['cookingLevel'] . "</td><td>" . $row['rating'] 
+                            . $stars . "</td><td>" . '<a href=adminEditDeleteRecipe.php?id=' . $idOfRow . '>Edit</a>' ."</td><td>" . '<a href=../includes/deleteRecipe.php?id=' . $idOfRow . '>Delete</a>' . "</td></tr>";
+                        } 
+
+                        // '<a href=../includes/updateRecipe.php?id=' . $idOfRow . '>Edit</a>' . 
+
+                        echo "</table>";
+                    } else {
+                        echo "0 results";
+                    }
+
+
+                    $conn-> close();
+
+                    ?>
+            </table>
+
+
+
+
+
+                <!-- <table class="adminTable">
                     <tr class="blankRow">
                         <th></th>
                         <th>Recipe Name</th>
@@ -50,102 +94,104 @@
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
-                    </tr>
-
-                    <tr class="styledRow">
-                        <th></th>
-                        <th>Spicy Chicken Wings</th>
-                        <th>Beginner</th>
-                        <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
                     <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
-                    </tr><tr class="styledRow">
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
+                    </tr>
+                    <tr class="styledRow">
                         <th></th>
                         <th>Spicy Chicken Wings</th>
                         <th>Beginner</th>
                         <th>5 Stars</th>
-                        <th><a href="adminEditDeleteRecipe.html">Edit/Delete</a></th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
                     </tr>
-                </table>
+                    <tr class="styledRow">
+                        <th></th>
+                        <th>Spicy Chicken Wings</th>
+                        <th>Beginner</th>
+                        <th>5 Stars</th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
+                    </tr>
+                    <tr class="styledRow">
+                        <th></th>
+                        <th>Spicy Chicken Wings</th>
+                        <th>Beginner</th>
+                        <th>5 Stars</th>
+                        <th><a href="adminEditDeleteRecipe.php">Edit/Delete</a></th>
+                    </tr>
+                </table> -->
             </div>
         </section>
-        <footer>
-            <div class="footerLogo">
-                <img src="../media/images/recipeFooterLogo.svg" alt="Footer logo for this website, TF  |  Tasty Food Co." class="desktopFooter">
-                <img src="../media/images/footerLogoTablet.png" alt="Footer logo for this website, TF  |  Tasty Food Co." class="tabletFooter">
-                <img src="../media/images/mobileFooterLogo.png" alt="Footer logo for this website, TF  |  Tasty Food Co." class="mobileFooter">
-            </div>
-        </footer>
+        
+        <?php include '../includes/footer.php';?>
         
         <script src="script.js" async defer></script>
     </body>
