@@ -24,7 +24,7 @@ $recipeId = $_GET['id'];
         $dryIngred = explode(";;", htmlspecialchars_decode($row['dryIngred'], ENT_QUOTES));
         $wetIngred = explode(";;", htmlspecialchars_decode($row['wetIngred'], ENT_QUOTES));
         $directions = explode(";;", htmlspecialchars_decode($row['directions'], ENT_QUOTES));
-        $writersNote = htmlspecialchars_decode($row['writersNote'], ENT_QUOTES);
+        $writersNote = explode(";;", htmlspecialchars_decode($row['writersNote'], ENT_QUOTES));
         $foodImage = $row['foodImage'];
         $totalTime = $row['prepTime'] + $row['cookTime'];
         }

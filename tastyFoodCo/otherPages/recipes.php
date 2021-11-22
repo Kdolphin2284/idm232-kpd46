@@ -34,7 +34,7 @@
         </section>
         <section id="recipes">
             <div class="col-1-3">
-                <form action="" method="GET" id="filterForm">
+                <form action="" method="GET" class="filterForm">
                     <div class="filterRecipe">
                         <label for="keywordSearch">Filter Recipes</label>
                         <input id="keywordSearch" name="keywordSearch" type="text">
