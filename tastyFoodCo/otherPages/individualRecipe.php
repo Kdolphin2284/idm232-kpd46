@@ -137,9 +137,12 @@ $recipeId = $_GET['id'];
                <div class="col-2-3">
                 <h2>Writer's Note</h2>
                 <ul>
-                    <li>
-                        <?php echo $writersNote;?>
-                    </li>
+                <?php 
+                    for($i = 0; $i<sizeof($writersNote); $i++){
+                        $bullet = $writersNote[$i];
+                        echo "<li>$bullet</li>";
+                    }
+                ?>
                 </ul>
                </div>
                <div class="col-1-3" style="background: url('<?php echo $foodImage;?>'); background-size: cover;"></div>

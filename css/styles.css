@@ -136,7 +136,16 @@ input[type="search"], input[type="text"] {
 .mobileFooter {
     display: none;
 } 
-
+/* html {
+    min-height: 100vh;
+    position: relative;
+}
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+} */
+  
 /* //////////////////////////////// */
 /* ////////// HEADER CSS ////////// */
 /* //////////////////////////////// */
@@ -292,6 +301,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .foodCard .cardImage {
     padding-bottom: 60%;
@@ -386,12 +397,14 @@ header {
 }
 .recipeFlex {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    width: auto;
-} 
+    width: 70%;
+}
+#recipes .col-1-3 {
+    width: 30%;
+}
 .recipeFlex .foodCard {
     margin-bottom: 5%;
 }
@@ -511,7 +524,21 @@ header {
 .recipeFlex .foodCard:nth-child(3n + 3) .cardImage {
     background-image: url(../media/images/burger.jpg);
 }
-
+.cardContent {
+    min-height: 119.5px;
+}
+#recipes .recipeFlex .foodCard {
+    margin-bottom: 5%;
+}
+.col-2-3.recipeFlex .foodCard:not(:nth-child(3n+1)) {
+    margin-left: 5%;
+}
+.ratingFlex img {
+    width: 22px;
+}
+.recipeStars img {
+    width: 22px;
+}
 
 /* //////////////////////////////////////// */
 /* ////////// SEARCH RESULTS CSS ////////// */
@@ -833,6 +860,22 @@ header {
     justify-content: center;
     align-items: flex-start;
 }
+.writersNote ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.directionsField span {
+    color: rgba(0,0,0,.6);
+    font-size: 14px;
+    margin-top: 10px;
+}
+.directionsField label {
+    display: flex;
+    flex-direction: column;
+}
+.directionsField span {
+    width: max-content;
+}
+  
 
 
 /* ///////////////////////////////////// */
@@ -842,7 +885,7 @@ header {
 #adminHeader {
     background: #f2f2f2;
 }
-#adminLogin {
+.adminLogin {
     height: calc(100vh - 220px);
     width: 100%;
     position: relative;
@@ -851,7 +894,7 @@ header {
     align-items: center;
     background: linear-gradient(#fff 50%, #FFA573 50%);
 }
-#adminForm {
+.adminForm {
     padding: 30px;
     background: #fff;
     display: flex;
@@ -862,7 +905,7 @@ header {
     border-radius: 20px;
     box-shadow: 0px 2px 10px 0px #6161616b;
 }
-#adminForm h2 {
+.adminForm h2 {
     color: #FF7E36;
     font-size: 48px;
     margin-bottom: 30px;
@@ -887,7 +930,7 @@ header {
     padding: 6px 20px 6px 20px;
     outline: none;
 }
-#adminForm input[type="submit"] {
+.adminForm input[type="submit"] {
     border: 2px solid #ff7e36;
     background: #ff7e36;
     color: #fff;
@@ -898,7 +941,7 @@ header {
     cursor: pointer;
     transition: all .5s ease;
 }
-  #adminForm input[type="submit"]:hover {
+  .adminForm input[type="submit"]:hover {
     background: transparent;
     color: #ff7e36;
 }
@@ -1017,6 +1060,66 @@ header {
 }
 
 
+.adminTable .styledRow td:first-child {
+    width: 10%;
+    padding: 30px 0;
+    background: url(../media/images/chickenWings.jpg);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    padding: 35px 16px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.adminTable .styledRow td:nth-child(2) {
+    width: 26.667%;
+}
+.adminTable .styledRow td {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-family: Roboto Medium;
+    font-size: 18px;
+    color: #fff;
+    background: #FFA573;
+}
+.adminTable .styledRow td:nth-child(3), .adminTable .styledRow td:nth-child(4) {
+    width: 15%;
+}
+.adminTable .styledRow td:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #393939;
+    color: #fff !important;
+}
+.adminTable .styledRow td:last-child a {
+    color: #fff;
+}
+.styledRow th:last-child {
+    background: #393939;
+    cursor: pointer;
+}
+.adminTable .styledRow td:nth-child(5), .adminTable .styledRow td:nth-child(6) {
+    width: 7.5%;
+}
+.adminTable button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 5px;
+    background: top;
+    color: #fff;
+    cursor: pointer;
+}
+.adminTable .styledRow td:nth-child(5) {
+    background: #5a5a5a;
+}
+.adminTable a {
+    color: #fff;
+}
+
 /* ////////////////////////////////////////// */
 /* ////////// ADMIN ADD RECIPE CSS ////////// */
 /* ////////////////////////////////////////// */
@@ -1026,7 +1129,7 @@ header {
     margin: 60px 0;
     padding-left: 65px;
 }
-#recipeAddForm {
+.recipeAddForm {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1045,26 +1148,26 @@ select#cookingLevel, select#adminRating {
     padding: 5px 15px;
     font-family: Roboto Medium;
 }
-#recipeAddForm label {
+.recipeAddForm label {
     font-family: Roboto Medium;
     margin-right: 20px;
 }
-#recipeAddForm field:first-child {
+.recipeAddForm field:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#recipeAddForm field input {
+#imageUploadField field input {
     border: none;
     outline: none;
-}
-#recipeAddForm field:first-child input {
+}    
+.recipeAddForm field:first-child input {
     width: 600px;
 } 
-#recipeAddForm field {
+.recipeAddForm field {
     margin-bottom: 40px;
 }  
-#recipeAddForm field input[type="text"] {
+.recipeAddForm field input[type="text"] {
     padding: 8px;
     font-family: Roboto Medium;
 }
@@ -1114,13 +1217,14 @@ select#cookingLevel, select#adminRating {
 #imageUpload {
     display: none;
 }
-#recipeAddForm field:nth-child(8) label:nth-child(2) {
-    margin: 0;
-    padding: 10px 15px;
-    background: #fff;
-    border: 2px solid #000;
-    cursor: pointer;
+#imageUploadField label:nth-child(2) {
+margin: 0;
+padding: 10px 15px;
+background: #fff;
+border: 2px solid #000;
+cursor: pointer;
 }
+
 .directionsField {
     display: flex;
     justify-content: flex-start;
@@ -1170,7 +1274,7 @@ select#cookingLevel, select#adminRating {
     top: -8px;
     left: -10px;
 }
-#recipeAddForm field:nth-child(10) {
+.recipeAddForm field:nth-child(10) {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1191,7 +1295,9 @@ select#cookingLevel, select#adminRating {
     color: #393939;
     background: transparent;
 }
-
+.adminAdd textarea, .adminAdd input {
+    border: none;
+}
 
 /* //////////////////////////////////////////////// */
 /* ////////// ADMIN EDIT DELETE PAGE CSS ////////// */
@@ -1257,6 +1363,27 @@ th a {
     width: 100%;
     text-align: left;
     line-height: 56px;
+}
+
+
+/* ////////////////////////////////////// */
+/* ////////// SIGN UP PAGE CSS ////////// */
+/* ////////////////////////////////////// */
+
+.adminForm button {
+    border: 2px solid #ff7e36;
+    background: #ff7e36;
+    color: #fff;
+    font-family: Roboto Medium;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.adminForm button:hover {
+    background: transparent;
+    color: #ff7e36;
 }
 
 
@@ -1410,7 +1537,7 @@ header {
 .writersNote ul li {
     font-size: 16px;
 }
-#adminLogin {
+.adminLogin {
     height: calc(100vh - 170px);
     width: 100%;
     position: relative;
@@ -1429,7 +1556,7 @@ footer {
     height: 100px;
 }
 .adminTable th {
-    font-size: 14px;
+    font-size: 16px;
 }
 th a {
     font-size: 14px;
@@ -1454,10 +1581,10 @@ th a {
     padding: 0 50px;
     width: auto;
 } 
-#recipeAddForm label {
+.recipeAddForm label {
     font-size: 16px;
 }
-#recipeAddForm field:first-child input {
+.recipeAddForm field:first-child input {
     width: 350px;
 }
 .dryWetBox {
@@ -1465,6 +1592,9 @@ th a {
 }
 textarea {
     width: 75%;
+}
+.adminTable td, .adminTable a {
+    font-size: 16px !important;
 }
 }
 
@@ -1565,9 +1695,7 @@ textarea {
 #individualHero h1 {
     font-size: 28px;
 }
-
 .helpfulInfo {
-    /* padding: 80px 50px; */
     padding: 80px 30px;
 }
 .helpfulInfo .contentContainer {
@@ -1601,6 +1729,17 @@ textarea {
 .directions {
     padding: 80px 30px;
 }
+.directionsField, .dryWetContainer + field + field + field {
+    display: flex;
+    flex-direction: column;
+} 
+.directionsField textarea, .dryWetContainer + field + field + field textarea {
+    width: 100%;
+    margin-top: 15px;
+} 
+.directionsField label, .dryWetContainer + field + field + field label {
+    font-size: 20px !important;
+}
 .writersNote .contentContainer {
     flex-direction: column-reverse;
 }
@@ -1623,7 +1762,7 @@ textarea {
     width: 100%;
     margin-bottom: 30px;
 }
-#adminForm {
+.adminForm {
     width: 275px;
 }
 .adminInput input {
@@ -1677,13 +1816,13 @@ th a {
 .adminAdd .contentContainer {
     padding: 0;
 }
-#recipeAddForm {
+.recipeAddForm {
     padding: 50px 30px;
 }
-#recipeAddForm field:first-child input {
+.recipeAddForm field:first-child input {
     width: 150px;
 }
-#recipeAddForm field:nth-child(4) input:nth-child(2), #recipeAddForm field:nth-child(5) input:nth-child(2), #recipeAddForm field:nth-child(6) input:nth-child(2) {
+.recipeAddForm field:nth-child(4) input:nth-child(2), .recipeAddForm field:nth-child(5) input:nth-child(2), .recipeAddForm field:nth-child(6) input:nth-child(2) {
     width: 130px;
 }
 .adminAddIngredients .dryWetFlex {
@@ -1732,5 +1871,35 @@ textarea {
     font-weight: inherit;
     font-size: 18px;
     margin-bottom: 12px;
+}
+.adminTable .styledRow td:first-child {
+    width: auto;
+    padding: 125px 16px;
+    border-radius: 12px 12px 0px 0px;
+}
+.adminTable .styledRow td:nth-child(2) {
+    width: auto;
+}
+.adminTable .styledRow td:nth-child(3), .adminTable .styledRow td:nth-child(4) {
+    width: auto;
+}
+.adminTable .styledRow td:nth-child(5), .adminTable .styledRow td:nth-child(6) {
+    width: auto;
+    border-radius: 0;
+}
+.adminTable .styledRow td:not(:first-child) {
+    padding: 8px 0 8px 16px;
+}
+.adminTable .styledRow td:last-child {
+    border-radius: 0px 0px 12px 12px;
+}
+.col-2-3.recipeFlex .foodCard:not(:nth-child(3n+1)) {
+    margin-left: 0;
+}
+#filterForm {
+    display: none;
+}
+#recipes {
+    padding: 70px 30px;
 }
 }
