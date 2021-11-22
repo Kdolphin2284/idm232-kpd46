@@ -138,7 +138,7 @@ $recipeId = $_GET['id'];
                 <h2>Writer's Note</h2>
                 <ul>
                 <?php 
-                    for($i = 0; $i < sizeof($writersNote); $i++){
+                    for($i = 0; $i < count($writersNote); $i++){
                         $bullet = $writersNote[$i];
                         echo "<li>$bullet</li>";
                     }
