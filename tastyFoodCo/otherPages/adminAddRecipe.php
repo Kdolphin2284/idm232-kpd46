@@ -99,17 +99,11 @@
                         <label for="writersNoteAdd">Writer's Note <span>Separate notes with ;;</span></label>
                         <textarea id="writersNoteAdd" name="writersNoteAdd" rows="5" cols="50"></textarea>
                     </field>
-                    
-                    <!-- ANDREWS CHANGE -->
-
                     <field class="directionsField">
                         <label for="fileUpload">Upload Image</label>
                         <input type="file" name="fileUpload" onchange="updateBase64()" />
                         <input type="hidden" id="base64Image" name="base64Image" />
                     </field>
-
-
-                    <!-- -->
 
                     <button type="submit" id="recipeFormSubmit" name="submit">Submit Recipe</button>
                 </form>
