@@ -1,5 +1,6 @@
 <?php include '../includes/dbh.inc.php';?>
 <?php
+
     // Select Information from MySQL
     $sql = "SELECT * FROM recipestorage";
     $result = mysqli_query($conn, $sql);
@@ -61,18 +62,13 @@
 
             
                         while($row = mysqli_fetch_array($result)){
-                            // echo "test";
                             $id = $row['id'];
                             $image = $row['foodImage'];
                             $recipeName = htmlspecialchars_decode($row['recipeName'], ENT_QUOTES);
                             $writesNote = htmlspecialchars_decode(substr($row['writersNote'], 0, 50) . "...", ENT_QUOTES);
-                            // echo $recipeName;
-                            // echo $writesNote;
-                            // echo $query;
                             if(!str_contains(strtoupper($recipeName), strtoupper($query) ) && !str_contains(strtoupper($writesNote), strtoupper($query) )){
                                 continue;
                             }
-                            // var_dump($row);
                             $rating = $row['rating'];
                             $ratingHTML = "";
                             for($i = 0; $i<$rating; $i++){
@@ -92,6 +88,8 @@
                             </a>
                         </div>";
                         }
+
+                        
                     ?>
             </div>
         </section>

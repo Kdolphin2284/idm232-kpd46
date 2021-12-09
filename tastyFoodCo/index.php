@@ -86,43 +86,6 @@
                         </div>";
                         }
                     ?>
-                    <!-- <div class="foodCard">
-                        <a href="otherPages/individualRecipe.php">
-                            <div class="cardImage"></div>
-                        <div class="cardContent">
-                            <h4>Spicy Chicken Wings</h4>
-                            <div class="recipeStars">
-                                <img src="media/images/recipeStars.svg" alt="Recipe star rating image">
-                            </div>
-                            <p>Crispy, spicy chicken wings are always a crowd pleaser...</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="foodCard">
-                        <a href="otherPages/individualRecipe.php">
-                            <div class="cardImage"></div>
-                        <div class="cardContent">
-                            <h4>Egg Noodle Stirfry</h4>
-                            <div class="recipeStars">
-                                <img src="media/images/recipeStars.svg" alt="Recipe star rating image">
-                            </div>
-                            <p>Elegant egg noodles cooked with grilled chicken, tomatoes...</p>
-                        </div>
-                        </a>
-                    </div>
-                    <div class="foodCard">
-                        <a href="otherPages/individualRecipe.php">
-                            <div class="cardImage"></div>
-                        <div class="cardContent">
-                            <h4>Cheddar Burger</h4>
-                            <div class="recipeStars">
-                                <img src="media/images/recipeStars.svg" alt="Recipe star rating image">
-                            </div>
-                            <p>Cooked medium, the cheddar burger tends to surprise...</p>
-                        </div>
-                        </a>
-                    </div>
-                </div> -->
                 <div id="recipeSuggestionsLink">
                     <a href="otherPages/recipes.php">All Recipes</a>
                 </div>
