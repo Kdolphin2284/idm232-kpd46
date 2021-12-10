@@ -125,7 +125,9 @@ textarea {
 input[type="search"], input[type="text"] {
     font-family: Roboto Medium;
     outline: none;
-
+}
+.ingredientCheck input[type="checkbox"] {
+    padding: 10px !important;
 }
 .desktopFooter {
     display: block;
@@ -321,7 +323,7 @@ header {
 }
 .cardContent h4 {
     font-family: 'Roboto Bold';
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     letter-spacing: 0;
     color: #000;
@@ -397,8 +399,15 @@ header {
     flex-direction: row;
     width: 70%;
 }
-#recipes .col-1-3 {
+/* #recipes .col-1-3 {
     width: 30%;
+} */
+#recipes .col-1-3 {
+    display: none !important;
+}
+#recipes .col-2-3.recipeFlex {
+    width: 80% !important;
+    margin: 0 auto;
 }
 .recipeFlex .foodCard {
     margin-bottom: 5%;
@@ -688,7 +697,7 @@ header {
 .ingredientCheck {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 .ingredientCheck input[type="checkbox"] {
     appearance: none;
@@ -1594,7 +1603,10 @@ textarea {
     margin-left: 0;
 }
 .col-2-3.recipeFlex .foodCard:nth-child(2n+2) {
-    margin-left: 5%;
+    margin-left: 2.5%;
+}
+.col-2-3.recipeFlex .foodCard:nth-child(2n+1) {
+    margin-right: 2.5%;
 }
 }
 
@@ -1897,7 +1909,22 @@ textarea {
 .col-2-3.recipeFlex .foodCard {
     margin-left: 0 !important;
 }
-.col-2-3.recipeFlex .foodCard:nth-child(2n+2) {
+/* .col-2-3.recipeFlex .foodCard:not(:nth-child(3n+1)) {
     margin-left: 0;
+} */
+.col-2-3.recipeFlex .foodCard:nth-child(2n+2) {
+    margin-left: 0%;
+}
+.col-2-3.recipeFlex .foodCard:nth-child(2n+1) {
+    margin-right: 0%;
+}
+
+.foodCard h4 {
+    font-size: 18px;
+    font-size: 24px;
+}
+.foodCard p {
+    font-size: 14px;
+    font-size: 20px;
 }
 }

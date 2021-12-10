@@ -30,7 +30,7 @@
                             <a href="otherPages/recipes.php">Recipes</a>
                         </li>
                         <li>
-                            <a href="otherPages/adminLogin.php">Admin</a>
+                            <a href="otherPages/adminRecipes.php">Admin</a>
                         </li>
                     </ul>
                 </div>

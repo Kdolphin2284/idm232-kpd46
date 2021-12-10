@@ -23,7 +23,7 @@
                             <a href="recipes.php">Recipes</a>
                         </li>
                         <li>
-                            <a href="adminLogin.php">Admin</a>
+                            <a href="adminRecipes.php">Admin</a>
                         </li>
                     </ul>
                 </div>
