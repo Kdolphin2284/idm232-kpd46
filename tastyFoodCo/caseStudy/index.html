@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>IDM241 || Case Study</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/normalize.css">
+    </head>
+    <body>
+        <section id="hero">
+            <h1>Case Study - Scripting II</h1>
+        </section>
+        <section id="overview">
+            <div class="flexContain">
+                <div class="col-1-1">
+                    <h2>The Overview</h2>
+                    <p>The objective for this project is to create a website which pulls and displays data from a self hosted MySQL database, using PHP
+                        as the main programming language. 
+                        In a 10 week timeframe, I designed and developed a fully functional recipe website. I worked on a figma design file to 
+                        design each of the pages for the site, and once they were designed I moved over to visual studio 
+                        code to develop them. The final product is a recipe site which contains over 40 unique recipes. Users are able to view, edit, delete, and
+                    add data to this website through the admin panel.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contextChallenges">
+            <div class="flexContain">
+                <div class="col-1-1 title">
+                    <h2>Context and Challenges</h2>
+                </div>
+                <div class="contentContain">
+                    <div class="col-1-1">
+                        <h3>Background / Timeline / Purpose</h3>
+                        <p>I was tasked with designing and developing a recipe site in PHP and MySQL. The given timeframe was 10 weeks, and I built up to 
+                            the final product by creating alpha and beta versions of the site. The purpose behind this is to learn both PHP and MySQL, 
+                            as well as to build a fully functional recipe website.</p>
+                    </div>
+                    <div class="col-1-1">
+                        <h3>The Problem</h3>
+                        <p>This project seeks to find the solution behind how databases work, and how developers use them to dynamically
+                            display data across the web. I haven't done any of this before, so understanding how databases really work was
+                            the first big hurdle I had to overcome.
+                        </p>
+                    </div>
+                    <div class="col-1-1">
+                        <h3>Goals and Objectives</h3>
+                        <p>This project can be defined as successful if it allows users to add, edit, delete, and view data using MySQL and PHP. This project can
+                            also bee deemed as successful is the search function works.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="processInsights">
+            <div class="flexContain">
+                <div class="col-1-1 title">
+                    <h2>Process and Insights</h2>
+                </div>
+                <div class="contentContain">
+                    <div class="col-1-1">
+                        <div class="col-1-1">
+                            <h3>Pre Development Designs</h3>
+                        </div>
+                        <div id="designs">
+                            <div class="col-1-1">
+                                <div class="col-1-1">
+                                    <p>These are my original designs for the website. I wanted the site to feel clean and modern, while still feeling
+                                        relaxed and showcasing all of the different recipes. I decided to put hero images on each of the user side pages,
+                                        instead of indiciating their page in the navigation, because then it could be styled as a decorative element to improve
+                                        the look of the site. For my admin recipe viewing page, I knew that I wanted the information to be displayed in a grid,
+                                        but I still wanted it to have a modern feel, which is why I incorporated the colors from the user pages. 
+                                    </p>
+                                </div>
+                                <div class="col-1-1 designImages">
+                                    <div class="col-1-4"><img src="media/images/tastyHome.png" alt="Image of homepage design"></div>
+                                    <div class="col-1-4"><img src="media/images/tastyRecipes.png" alt="Image of all recipes page design"></div>
+                                    <div class="col-1-1">
+                                        <p>I really like the card design that Google and Apple often put into their software and apps, which is where I got the inspiration
+                                            behind displaying the recipes across the user side of the website. I also wanted the individual recipe page to feel open, while
+                                            almost feeling like a cookbook, which is where the orange "crease" on the right of the difrections came from.
+                                        </p>
+                                    </div>
+                                    <div class="col-1-4"><img src="media/images/tastyIndiFood.png" alt="Image of individual recipes page design"></div>
+                                    <div class="col-1-4"><img src="media/images/tastyResults.png" alt="Image of recipe results page design"></div>
+                                    <div class="col-1-1">
+                                        <p>For the admin pages, I wanted them to feel different than the user side pages - more information based - while still
+                                            feeling like a recipe site. I added the orange from the user pages to make it feel warmer, and used "Arbutus Slab" as my heading font to 
+                                            keep the feel relaxed. Overall, I'm happy with how these pages came out.
+                                        </p>
+                                    </div>
+                                    <div class="col-1-4"><img src="media/images/tastyLogin.png" alt="Image of login page design"></div>
+                                    <div class="col-1-4"><img src="media/images/tastyAdminRecipes.png" alt="Image of admin recipe viewing page design"></div>
+                                    <div class="col-1-4"><img src="media/images/tastyForm.png" alt="Image of recipe form page design"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="solution">
+            <div class="flexContain">
+                <div class="col-1-1 title">
+                    <h2>The Solution</h2>
+                </div>
+                <div class="col-1-1">
+                    <div class="col-1-1">
+                        <h3>Final Developed Recipe Site</h3>
+                        <p>Below is a link to the final product. It came out looking identical to my designs, and everything on the site is functional. I ended up focusing more on the responsiveness and look
+                            of the site towards the end of the project, so I didn't implement the signup/login feature. The concept is very similar to storing information for recipes, so I am planning on
+                            starting a project soon that dives into that. The search is fully functional, as previously stated, and checks the recipe names for the searched term, as well as the "writers
+                            note" description to find results. Finally, the recipes displayed on the homepage are the 3 most recently added recipes.
+                        </p>
+                        <p>To get more into the technical side of things, one part I did struggle on was the image uploading/pulling from the database. I ended up overcoming this struggle through the 
+                            use of base64 image convserion in javascript. Basically, when you go to upload an image, the file is converted into a string which is then stored in the database. When you go to
+                            pull that image out of the database to display it, the string is converted back into the image. This does have one negative side effect, and that is that the image increases slightly
+                            in size, but the images I upload are usually around 400kb so it doesn't noticeably effect anything. I could have figured it out another way, but being completely honest I thought that
+                            this method sounded really cool so I wanted to experiment.
+                        </p>
+                        <a href="../index.php" target="_blank">View Final Interaction</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="results">
+            <div class="flexContain">
+                <div class="col-1-1 title">
+                    <h2>The Result</h2>
+                </div>
+                <div class="col-1-1">
+                    <p>Overall, I’d say that this project was a success. I accomplished what I set out to do, which was to design and develop a functional
+                        recipe website using PHP as my main programming language. The website is able to add, edit, delete, and display data from a MySQL database, 
+                        and the search function on the site is functional. I knew very minimal PHP, and no MySQL, going into this project so I definitely learned a 
+                        lot. This has made me really interested in these languages, and has made me realize how much I can truly accomplish with code.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <footer><h5>A case study, by Kyle Dolphin.</h5></footer>
+
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
